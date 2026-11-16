@@ -8,6 +8,7 @@
 
 [![Live Showcase](https://img.shields.io/badge/Live_Showcase-Visit_Website-0071E3?style=for-the-badge&logo=google-chrome&logoColor=white)](https://vanshika-singh-991.github.io/vanshika-internship-portfolio/)
 [![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/vanshika-singh-991/vanshika-internship-portfolio)
+[![Project Presentation](https://img.shields.io/badge/Presentation-Google_Slides-EA4335?style=for-the-badge&logo=googleslides&logoColor=white)](https://docs.google.com/presentation/d/1dk0BQknhymNBdzDNk1o3cXILpFfVrK9RHsdGHRAGsPo/edit?usp=sharing)
 [![Internship Host](https://img.shields.io/badge/Host-InternPe-FF6B6B?style=for-the-badge)](https://internpe.in)
 [![Verification Status](https://img.shields.io/badge/Evaluation-Passed_5%2F5_Tests-34C759?style=for-the-badge&logo=checkmarx&logoColor=white)](#-automated-testing--verification)
 
@@ -64,6 +65,7 @@ The project suite consists of **four standalone web applications** built from th
 | **Internship Period** | **6 Weeks \| 06 July 2026 – 19 August 2026** |
 | **Submission Date** | **17 September 2026** |
 | **Live Web Portal** | [vanshika-singh-991.github.io/vanshika-internship-portfolio/](https://vanshika-singh-991.github.io/vanshika-internship-portfolio/) |
+| **Project Presentation (PPT)** | [Google Slides Project Presentation](https://docs.google.com/presentation/d/1dk0BQknhymNBdzDNk1o3cXILpFfVrK9RHsdGHRAGsPo/edit?usp=sharing) |
 
 ---
 
