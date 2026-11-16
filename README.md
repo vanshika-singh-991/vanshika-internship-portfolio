@@ -9,6 +9,7 @@
 [![Live Showcase](https://img.shields.io/badge/Live_Showcase-Visit_Website-0071E3?style=for-the-badge&logo=google-chrome&logoColor=white)](https://vanshika-singh-991.github.io/vanshika-internship-portfolio/)
 [![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/vanshika-singh-991/vanshika-internship-portfolio)
 [![Project Presentation](https://img.shields.io/badge/Presentation-Google_Slides-EA4335?style=for-the-badge&logo=googleslides&logoColor=white)](https://docs.google.com/presentation/d/1dk0BQknhymNBdzDNk1o3cXILpFfVrK9RHsdGHRAGsPo/edit?usp=sharing)
+[![Project Report](https://img.shields.io/badge/Report-Word_Document-2B579A?style=for-the-badge&logo=microsoftword&logoColor=white)](https://1drv.ms/w/c/ed5006a13bcdb22d/IQB9bgLfmq01QLhHc2RFrdjAAXeLovBAQ6hU1Z4iSVhPQe4?e=R05Db2)
 [![Internship Host](https://img.shields.io/badge/Host-InternPe-FF6B6B?style=for-the-badge)](https://internpe.in)
 [![Verification Status](https://img.shields.io/badge/Evaluation-Passed_5%2F5_Tests-34C759?style=for-the-badge&logo=checkmarx&logoColor=white)](#-automated-testing--verification)
 
@@ -66,6 +67,7 @@ The project suite consists of **four standalone web applications** built from th
 | **Submission Date** | **17 September 2026** |
 | **Live Web Portal** | [vanshika-singh-991.github.io/vanshika-internship-portfolio/](https://vanshika-singh-991.github.io/vanshika-internship-portfolio/) |
 | **Project Presentation (PPT)** | [Google Slides Project Presentation](https://docs.google.com/presentation/d/1dk0BQknhymNBdzDNk1o3cXILpFfVrK9RHsdGHRAGsPo/edit?usp=sharing) |
+| **Project Report (DOCX)** | [Microsoft Word Internship Report](https://1drv.ms/w/c/ed5006a13bcdb22d/IQB9bgLfmq01QLhHc2RFrdjAAXeLovBAQ6hU1Z4iSVhPQe4?e=R05Db2) |
 
 ---
 
