@@ -143,7 +143,7 @@
       box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.06);
     }
 
-    /* Profile Popover Sizing & Display States (Covers max 60% viewport height) */
+    /* Profile Popover Sizing & Display States (Covers max 85% viewport height) */
     #profilePopover.popover-open {
       opacity: 1 !important;
       pointer-events: auto !important;
@@ -297,7 +297,7 @@
   <header class="fixed top-0 left-0 w-full z-50 bg-surface/85 backdrop-blur-md border-b border-outline-variant/30 shadow-[0_1px_12px_rgba(0,0,0,0.06)]">
     <div class="h-14 sm:h-16 max-w-[1200px] mx-auto px-3 sm:px-6 flex items-center justify-between gap-2 sm:gap-4">
       <div class="flex items-center gap-2 min-w-0">
-        <a class="text-[17px] sm:text-[19px] text-on-surface font-semibold tracking-tight hover:text-primary transition-colors shrink-0" href="#">
+        <a id="brandLogoBtn" class="text-[17px] sm:text-[19px] text-on-surface font-semibold tracking-tight hover:text-primary transition-colors shrink-0 cursor-pointer touch-manipulation" href="#overview" title="Vanshika Singh • View Profile">
           Vanshika<span class="text-primary">.dev</span>
         </a>
         <span class="hidden sm:inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container-high border border-outline-variant/40 font-mono text-[11px] text-on-surface-variant truncate">
@@ -332,8 +332,8 @@
             VS
           </button>
 
-          <!-- Interactive Profile Popover Box (Apple macOS 15 Spec - Max 60% Viewport Height) -->
-          <div id="profilePopover" class="absolute right-0 top-full mt-1.5 w-[320px] sm:w-[350px] max-w-[calc(100vw-1.25rem)] max-h-[60vh] flex flex-col transition-all duration-200 opacity-0 pointer-events-none translate-y-1 z-50 text-left select-none" role="dialog" aria-label="Profile Menu Window">
+          <!-- Interactive Profile Popover Box (Apple macOS 15 Spec - Max 85% Viewport Coverage) -->
+          <div id="profilePopover" class="fixed top-14 left-3 right-3 sm:absolute sm:top-full sm:right-0 sm:left-auto sm:w-[360px] sm:max-w-[calc(100vw-1.25rem)] max-h-[85vh] flex flex-col transition-all duration-200 opacity-0 pointer-events-none translate-y-1 z-50 text-left select-none" role="dialog" aria-label="Profile Menu Window">
             
             <!-- Top Floating Context Pill (Fixed Header) -->
             <div class="flex items-center justify-between mb-1.5 px-1 shrink-0">
@@ -343,14 +343,13 @@
                   Vanshika.dev · Profile View
                 </span>
               </div>
-              <span class="text-[10px] font-mono tracking-tight text-neutral-400 bg-white/60 dark:bg-neutral-900/60 backdrop-blur-md px-2 py-0.5 rounded-full border border-black/5 dark:border-white/10">macOS 15 Popover</span>
             </div>
 
-            <!-- Apple-style Popover Menu Window (Bounded to max 60vh) -->
-            <div class="w-full frosted-glass rounded-2xl sm:rounded-3xl border border-white/80 dark:border-white/10 shadow-apple-window overflow-hidden relative flex flex-col max-h-[calc(60vh-28px)]">
+            <!-- Apple-style Popover Menu Window (Bounded to max 85vh) -->
+            <div class="w-full frosted-glass rounded-2xl sm:rounded-3xl border border-white/80 dark:border-white/10 shadow-apple-window overflow-hidden relative flex flex-col max-h-[calc(85vh-28px)]">
 
-              <!-- Scrollable Content Area (Smooth custom scrollbar, never overflows 60%) -->
-              <div class="p-3 sm:p-3.5 space-y-2.5 overflow-y-auto overscroll-contain flex-1 popover-scroll">
+              <!-- Scrollable Content Area (Smooth custom scrollbar, covers up to 85%) -->
+              <div class="p-3.5 sm:p-4 space-y-3 overflow-y-auto overscroll-contain flex-1 popover-scroll">
                 
                 <!-- Profile Identity Card -->
                 <div class="bg-white/90 dark:bg-[#1e1e24]/90 rounded-xl sm:rounded-2xl p-3 border border-black/[0.05] dark:border-white/[0.08] shadow-xs flex items-start gap-3 relative overflow-hidden group">
@@ -1451,14 +1450,29 @@
         });
       });
 
-      // 7. Profile Avatar Popover (Desktop Hover + Mobile/Touch Tap + Scroll Close)
+      // 7. Profile Avatar Popover (Desktop Hover + Mobile/Touch Tap for both Left Brand & Right Avatar + Scroll Close)
       const profileContainer = document.getElementById("profileDropdownContainer");
       const profileAvatarBtn = document.getElementById("profileAvatarBtn");
+      const brandLogoBtn = document.getElementById("brandLogoBtn");
       const profilePopover = document.getElementById("profilePopover");
       const popoverThemeToggleBtn = document.getElementById("popoverThemeToggleBtn");
       let popoverCloseTimer = null;
       let openScrollY = 0;
       let lastToggleTime = 0;
+
+      function toggleProfilePopover(e) {
+        if (e) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+        const isOpen = profilePopover?.classList.contains("popover-open") || 
+                       !profilePopover?.classList.contains("opacity-0");
+        if (isOpen) {
+          hideProfilePopover();
+        } else {
+          showProfilePopover();
+        }
+      }
 
       function showProfilePopover() {
         if (popoverCloseTimer) clearTimeout(popoverCloseTimer);
@@ -1486,7 +1500,7 @@
         synopsisModal?.classList.remove("opacity-0", "pointer-events-none");
       };
 
-      // Desktop hover handlers
+      // Desktop hover handlers on the VS avatar container
       profileContainer?.addEventListener("mouseenter", () => {
         showProfilePopover();
       });
@@ -1501,22 +1515,17 @@
         if (popoverCloseTimer) clearTimeout(popoverCloseTimer);
       });
 
-      // Mobile / Touch / Click: toggle on avatar button with touch protection
+      // Tap on top-right VS avatar button (Touch & Click)
       profileAvatarBtn?.addEventListener("pointerdown", (e) => {
         e.stopPropagation();
       });
+      profileAvatarBtn?.addEventListener("click", toggleProfilePopover);
 
-      profileAvatarBtn?.addEventListener("click", (e) => {
-        e.preventDefault();
+      // Tap on top-left brand logo button "Vanshika.dev" (Touch & Click)
+      brandLogoBtn?.addEventListener("pointerdown", (e) => {
         e.stopPropagation();
-        const isOpen = profilePopover?.classList.contains("popover-open") || 
-                       !profilePopover?.classList.contains("opacity-0");
-        if (isOpen) {
-          hideProfilePopover();
-        } else {
-          showProfilePopover();
-        }
       });
+      brandLogoBtn?.addEventListener("click", toggleProfilePopover);
 
       // Theme toggle button inside the popover
       popoverThemeToggleBtn?.addEventListener("click", (e) => {
@@ -1538,13 +1547,13 @@
       // Close popover when tapping anywhere else on the screen
       document.addEventListener("pointerdown", (e) => {
         if (Date.now() - lastToggleTime < 250) return;
-        if (!profileContainer?.contains(e.target)) {
+        if (!profileContainer?.contains(e.target) && !brandLogoBtn?.contains(e.target)) {
           hideProfilePopover();
         }
       });
       document.addEventListener("click", (e) => {
         if (Date.now() - lastToggleTime < 250) return;
-        if (!profileContainer?.contains(e.target)) {
+        if (!profileContainer?.contains(e.target) && !brandLogoBtn?.contains(e.target)) {
           hideProfilePopover();
         }
       });
