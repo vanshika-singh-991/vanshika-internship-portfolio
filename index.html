@@ -255,8 +255,9 @@
         <a class="text-on-surface-variant hover:text-on-surface font-body-md text-body-md transition-colors" data-path="credentials" href="#credentials">Credentials</a>
       </nav>
 
-      <!-- Right Controls: Theme Toggle & Avatar -->
+      <!-- Right Controls: Theme Toggle & VS Profile Avatar with GitHub Popover -->
       <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+        <!-- Theme Toggle -->
         <div class="flex items-center p-0.5 sm:p-1 rounded-full bg-surface-container-lowest border border-outline-variant/40 backdrop-blur-xl cursor-pointer select-none" id="themeToggleGroup" title="Toggle Light / Dark mode">
           <button id="themeLightBtn" aria-label="Light mode" class="w-6 h-6 sm:w-7 sm:h-7 flex items-center justify-center rounded-full bg-surface-container-highest text-on-surface shadow-sm transition-all cursor-pointer" type="button" title="Light Theme">
             <span class="material-symbols-outlined text-[14px] sm:text-[15px] pointer-events-none">light_mode</span>
@@ -265,8 +266,62 @@
             <span class="material-symbols-outlined text-[14px] sm:text-[15px] pointer-events-none">dark_mode</span>
           </button>
         </div>
-        <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-primary flex items-center justify-center shrink-0 shadow-sm text-on-primary font-semibold text-[12px] sm:text-[13px]" title="Vanshika Singh">
-          VS
+
+        <!-- Profile Avatar & Popover Container -->
+        <div class="relative" id="profileDropdownContainer">
+          <button id="profileAvatarBtn" class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-primary flex items-center justify-center shrink-0 shadow-sm text-on-primary font-semibold text-[12px] sm:text-[13px] hover:ring-2 hover:ring-primary/40 focus:outline-none transition-all cursor-pointer" type="button" aria-haspopup="true" aria-expanded="false" title="Vanshika Singh • View GitHub Profile">
+            VS
+          </button>
+
+          <!-- Interactive Profile Popover Box (Matches Light & Dark theme) -->
+          <div id="profilePopover" class="absolute right-0 top-full mt-2 w-72 rounded-2xl bg-surface-container-lowest border border-outline-variant/50 shadow-2xl p-4 transition-all duration-200 opacity-0 pointer-events-none translate-y-1 z-50">
+            <!-- Header with Avatar and Status -->
+            <div class="flex items-center gap-3 pb-3 border-b border-outline-variant/30">
+              <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary font-bold text-[14px] shrink-0 shadow-sm">
+                VS
+              </div>
+              <div class="min-w-0 flex-1">
+                <div class="font-headline-sm text-[15px] text-on-surface font-semibold truncate leading-tight">Vanshika Singh</div>
+                <div class="font-label-code text-[11px] text-on-surface-variant truncate">@vanshika-singh-991</div>
+              </div>
+              <span class="w-2.5 h-2.5 rounded-full bg-success shrink-0" title="Active Candidate"></span>
+            </div>
+
+            <!-- Academic Credential details -->
+            <div class="py-2.5 space-y-1.5 font-body-md text-[12px] text-on-surface-variant">
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-[16px] text-primary shrink-0">school</span>
+                <span class="truncate">BCA &bull; CCSIT, TMU Moradabad</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-[16px] text-primary shrink-0">badge</span>
+                <span class="font-mono text-[11px]">ID: TCA2468642</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-[16px] text-primary shrink-0">work</span>
+                <span class="truncate">Web Dev Intern &bull; InternPe</span>
+              </div>
+            </div>
+
+            <!-- GitHub Actions -->
+            <div class="pt-2 space-y-2 border-t border-outline-variant/30 font-label-code text-[12px]">
+              <a href="https://github.com/vanshika-singh-991" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between px-3 py-2 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-medium transition-colors group">
+                <span class="flex items-center gap-2">
+                  <svg class="w-4 h-4 fill-current text-on-surface" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                  <span>GitHub Profile</span>
+                </span>
+                <span class="material-symbols-outlined text-[14px] text-outline group-hover:text-primary transition-colors">open_in_new</span>
+              </a>
+
+              <a href="https://github.com/vanshika-singh-991/vanshika-internship-portfolio" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between px-3 py-2 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-medium transition-colors group">
+                <span class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-[16px] text-primary">folder_code</span>
+                  <span>Repository Code</span>
+                </span>
+                <span class="material-symbols-outlined text-[14px] text-outline group-hover:text-primary transition-colors">open_in_new</span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -1176,6 +1231,62 @@
           }
         });
       });
+
+      // 7. Profile Avatar Popover (Desktop Hover + Mobile/Touch Tap + Scroll Close)
+      const profileContainer = document.getElementById("profileDropdownContainer");
+      const profileAvatarBtn = document.getElementById("profileAvatarBtn");
+      const profilePopover = document.getElementById("profilePopover");
+      let popoverCloseTimer = null;
+
+      function showProfilePopover() {
+        if (popoverCloseTimer) clearTimeout(popoverCloseTimer);
+        profilePopover?.classList.remove("opacity-0", "pointer-events-none", "translate-y-1");
+        profileAvatarBtn?.setAttribute("aria-expanded", "true");
+      }
+
+      function hideProfilePopover() {
+        profilePopover?.classList.add("opacity-0", "pointer-events-none", "translate-y-1");
+        profileAvatarBtn?.setAttribute("aria-expanded", "false");
+      }
+
+      // Desktop: hover on container shows popover; moving cursor into popover keeps it open
+      profileContainer?.addEventListener("mouseenter", () => {
+        showProfilePopover();
+      });
+
+      profileContainer?.addEventListener("mouseleave", () => {
+        popoverCloseTimer = setTimeout(() => {
+          hideProfilePopover();
+        }, 250);
+      });
+
+      // Mobile / Touch / Click: toggle on avatar tap
+      profileAvatarBtn?.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const isOpen = !profilePopover?.classList.contains("opacity-0");
+        if (isOpen) {
+          hideProfilePopover();
+        } else {
+          showProfilePopover();
+        }
+      });
+
+      // Prevent taps inside the popover from closing it
+      profilePopover?.addEventListener("click", (e) => {
+        e.stopPropagation();
+      });
+
+      // Close popover when tapping anywhere else on the screen
+      document.addEventListener("click", (e) => {
+        if (!profileContainer?.contains(e.target)) {
+          hideProfilePopover();
+        }
+      });
+
+      // Close popover immediately when the user scrolls
+      window.addEventListener("scroll", () => {
+        hideProfilePopover();
+      }, { passive: true });
     });
   </script>
 
