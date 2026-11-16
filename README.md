@@ -65,7 +65,7 @@ The project suite consists of **four standalone web applications** built from th
 | **Certificate Number** | **`CID: IPI#84419`** |
 | **Internship Period** | **6 Weeks \| 06 July 2026 – 19 August 2026** |
 | **Submission Date** | **17 September 2026** |
-| **Live Web Portal** | [vanshika-singh-991.github.io/vanshika-internship-portfolio/](https://vanshika-singh-991.github.io/vanshika-internship-portfolio/) |
+| **Live Web Portal** | [vanshika-singh-991.github.io/vanshika-internship-portfolio/](https://vanshika-singh-991.github.io/vanshika-internship-portfolio/)<br/><br/><a href="https://vanshika-singh-991.github.io/vanshika-internship-portfolio/"><img src="./assets/portal-qr.png" alt="Scan QR Code for Instant Live Access" width="130" height="130" /></a><br/><sub>📱 <i>Scan with phone camera for instant live access</i></sub> |
 | **Project Presentation (PPT)** | [Google Slides Project Presentation](https://docs.google.com/presentation/d/1dk0BQknhymNBdzDNk1o3cXILpFfVrK9RHsdGHRAGsPo/edit?usp=sharing) |
 | **Project Report (DOCX)** | [Microsoft Word Internship Report](https://1drv.ms/w/c/ed5006a13bcdb22d/IQB9bgLfmq01QLhHc2RFrdjAAXeLovBAQ6hU1Z4iSVhPQe4?e=R05Db2) |
 
