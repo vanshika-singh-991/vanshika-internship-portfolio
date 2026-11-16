@@ -30,7 +30,7 @@ This repository contains the complete academic web-development internship portfo
 
 The internship was conducted under the **InternPe Web Development Offline Program** from **06 July 2026 to 19 August 2026**, guided by academic faculty **Ms. Varsha Saini** and industry mentor **Krati Kumari** (Completion Certificate ID: `IPI#84419`).
 
-The project suite consists of **four standalone web applications** built from the ground up using pure, modern front-end web standards—semantic HTML5, responsive CSS3 layouts (Flexbox & CSS Grid), and object-based vanilla JavaScript ES6+ without heavy external framework bloat.
+The project suite consists of **four standalone web applications** built from the ground up using pure front-end web standards—semantic HTML5, responsive CSS3 layouts (Flexbox & CSS Grid), and object-based vanilla JavaScript ES6+ without heavy external framework dependencies.
 
 ```
 ┌────────────────────────────────────────────────────────────────────────────────────────┐
@@ -63,7 +63,7 @@ The project suite consists of **four standalone web applications** built from th
 | **Certificate Number** | **`CID: IPI#84419`** |
 | **Internship Period** | **6 Weeks \| 06 July 2026 – 19 August 2026** |
 | **Submission Date** | **17 September 2026** |
-| **Live Web URL** | [vanshika-singh-991.github.io/vanshika-internship-portfolio/](https://vanshika-singh-991.github.io/vanshika-internship-portfolio/) |
+| **Live Web Portal** | [vanshika-singh-991.github.io/vanshika-internship-portfolio/](https://vanshika-singh-991.github.io/vanshika-internship-portfolio/) |
 
 ---
 
@@ -163,27 +163,23 @@ As documented in **Synopsis §6 (Page 16)**:
 
 ```text
 vanshika-internship-portfolio/
-├── index.html                   # Master Portfolio Portal (Cupertino Dark/Light theme)
-├── README.md                    # Comprehensive academic documentation & project guide
-├── test.js                      # Automated self-check verification test runner
-├── .gitignore                   # Excludes build artifacts and temp files
-├── install.bat                  # One-click Windows installer (creates desktop shortcut)
-├── start.bat                    # One-click local server / browser launcher
-├── package.bat                  # One-click portable zip archive packager
+├── index.html                   # Master Portfolio Showcase Portal (Cupertino Dark/Light theme)
+├── README.md                    # Academic synopsis documentation & project guide
+├── test.js                      # Automated verification test suite
 │
 ├── task1-calculator/            # Task 1: Basic Calculator
 │   ├── index.html               # Semantic calculator markup
-│   ├── style.css                # Tactile button layout & responsive grid
+│   ├── style.css                # Button layout & responsive styling
 │   └── script.js                # Arithmetic engine & keyboard event listeners
 │
 ├── task2-ecommerce/             # Task 2: eCommerce Storefront (.sneakers)
 │   ├── index.html               # Storefront layout, hero banner & cart drawer
-│   ├── style.css                # Apple-inspired bento styling & typography
-│   └── script.js                # Catalog data, ₹ pricing, and cart state machine
+│   ├── style.css                # Bento grid styling & responsive typography
+│   └── script.js                # Product catalog, ₹ pricing, and cart state machine
 │
 ├── task3-todolist/              # Task 3: Dynamic To-Do List Manager
 │   ├── index.html               # Task input form, filter tabs & list container
-│   ├── style.css                # Status styling (pending vs completed strikes)
+│   ├── style.css                # Status styling (pending vs completed tasks)
 │   └── script.js                # Task CRUD logic & localStorage synchronization
 │
 └── task4-connect4/              # Task 4: Connect 4 Multiplayer Game
@@ -213,18 +209,6 @@ Running self-check tests...
 
 All self-check tests passed successfully!
 ```
-
----
-
-## 💻 Offline Windows Portable Setup
-
-For running this project on any offline Windows 10/11 machine without internet access or development tools:
-
-1. Clone or download this repository as a `.zip` archive.
-2. Double-click **`install.bat`**:
-   - Verifies all 4 task modules are present.
-   - Automatically generates a desktop shortcut: **`Web Development Internship`**.
-3. Double-click **`start.bat`** anytime to launch the local showcase portal in your default browser.
 
 ---
 
