@@ -8,6 +8,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <script>
+    (function() {
+      const t = localStorage.getItem("vanshika_portal_theme") || "light";
+      if (t === "dark") document.documentElement.classList.add("dark");
+    })();
+  </script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -25,6 +31,9 @@
       </div>
 
       <div class="nav-actions">
+        <button id="themeToggleBtn" class="theme-toggle-btn" title="Toggle Light / Dark mode" aria-label="Toggle theme">
+          <span class="material-symbols-outlined text-[18px]">dark_mode</span>
+        </button>
         <button id="cartBtn" class="cart-pill-btn" aria-label="View Shopping Bag">
           <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
           <span>Bag (<span id="cartCount">0</span>)</span>

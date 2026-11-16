@@ -217,3 +217,39 @@ function handleCheckoutSubmit() {
 // Initial Render
 renderHero(2);
 renderCatalog(products);
+
+// Theme Synchronization with Master Portfolio
+if (typeof window !== "undefined" && typeof document !== "undefined") {
+  const themeToggleBtn = document.getElementById("themeToggleBtn");
+  function applyTheme(isDark) {
+    if (isDark) {
+      document.documentElement.classList.add("dark");
+      if (themeToggleBtn) {
+        themeToggleBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">light_mode</span>';
+        themeToggleBtn.title = "Switch to Light Mode";
+      }
+    } else {
+      document.documentElement.classList.remove("dark");
+      if (themeToggleBtn) {
+        themeToggleBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">dark_mode</span>';
+        themeToggleBtn.title = "Switch to Dark Mode";
+      }
+    }
+  }
+
+  const currentTheme = localStorage.getItem("vanshika_portal_theme") || "light";
+  applyTheme(currentTheme === "dark");
+
+  themeToggleBtn?.addEventListener("click", () => {
+    const isDark = document.documentElement.classList.contains("dark");
+    const newTheme = isDark ? "light" : "dark";
+    localStorage.setItem("vanshika_portal_theme", newTheme);
+    applyTheme(!isDark);
+  });
+
+  window.addEventListener("storage", (e) => {
+    if (e.key === "vanshika_portal_theme") {
+      applyTheme(e.newValue === "dark");
+    }
+  });
+}

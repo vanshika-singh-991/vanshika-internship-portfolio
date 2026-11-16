@@ -100,6 +100,35 @@ window.addEventListener("keydown", (e) => {
   }
 });
 
+// Theme Synchronization with Master Portfolio
+if (typeof window !== "undefined" && typeof document !== "undefined") {
+  const themeToggleBtn = document.getElementById("themeToggleBtn");
+  function applyTheme(isDark) {
+    if (isDark) {
+      document.documentElement.classList.add("dark");
+      if (themeToggleBtn) themeToggleBtn.textContent = "☀️";
+    } else {
+      document.documentElement.classList.remove("dark");
+      if (themeToggleBtn) themeToggleBtn.textContent = "🌙";
+    }
+  }
+  const currentTheme = localStorage.getItem("vanshika_portal_theme") || "light";
+  applyTheme(currentTheme === "dark");
+
+  themeToggleBtn?.addEventListener("click", () => {
+    const isDark = document.documentElement.classList.contains("dark");
+    const newTheme = isDark ? "light" : "dark";
+    localStorage.setItem("vanshika_portal_theme", newTheme);
+    applyTheme(!isDark);
+  });
+
+  window.addEventListener("storage", (e) => {
+    if (e.key === "vanshika_portal_theme") {
+      applyTheme(e.newValue === "dark");
+    }
+  });
+}
+
 // Export helper for node testing if needed
 if (typeof module !== "undefined" && module.exports) {
   module.exports = { calculate, appendValue, clearAll, deleteLast };

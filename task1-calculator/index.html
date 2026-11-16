@@ -7,6 +7,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <script>
+    (function() {
+      const t = localStorage.getItem("vanshika_portal_theme") || "light";
+      if (t === "dark") document.documentElement.classList.add("dark");
+    })();
+  </script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,7 +25,7 @@
         <span class="dot zoom"></span>
       </div>
       <div class="window-title">Calculator &bull; Task 1</div>
-      <div class="spacer"></div>
+      <button type="button" id="themeToggleBtn" class="theme-toggle" title="Toggle Light / Dark mode" aria-label="Toggle theme">🌙</button>
     </div>
 
     <!-- Screen Display -->
