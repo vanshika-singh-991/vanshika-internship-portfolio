@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>Vanshika.dev</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<html class="light" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>Vanshika.dev</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>  <style>
     :root {
       --color-primary: 0 113 227;
@@ -217,10 +217,10 @@
       }
     };
   </script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 left-0 w-full z-50 bg-surface/75 backdrop-blur-2xl border-b border-outline-variant/30 shadow-[0_1px_12px_rgba(0,0,0,0.2)]"><div class="h-16 max-w-[1200px] mx-auto px-gutter-mobile md:px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm"><a class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight hover:text-primary transition-colors" href="#">Vanshika<span class="text-primary">.dev</span></a><span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container-high border border-outline-variant/40 font-label-code text-label-code text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>InternPe '26</span></div><nav class="hidden md:flex items-center gap-space-lg" data-active-classes="text-on-surface font-medium border-b border-primary pb-1"><a aria-current="page" class="transition-colors text-on-surface font-medium border-b border-primary pb-1" data-path="overview" href="#overview">Overview</a><a class="text-on-surface-variant hover:text-on-surface font-body-md text-body-md transition-colors" data-path="projects" href="#projects">Projects</a><a class="text-on-surface-variant hover:text-on-surface font-body-md text-body-md transition-colors" data-path="methodology" href="#methodology">Methodology</a><a class="text-on-surface-variant hover:text-on-surface font-body-md text-body-md transition-colors" data-path="tech-stack" href="#tech-stack">Tech Stack</a><a class="text-on-surface-variant hover:text-on-surface font-body-md text-body-md transition-colors" data-path="credentials" href="#credentials">Credentials</a></nav><div class="flex items-center gap-space-sm"><div class="flex items-center p-1 rounded-full bg-surface-container-lowest border border-outline-variant/40 backdrop-blur-xl cursor-pointer select-none" id="themeToggleGroup" title="Toggle Light / Dark mode">
-            <button id="themeLightBtn" aria-label="Light mode" class="w-7 h-7 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all cursor-pointer" type="button" title="Light Theme">
+            <button id="themeLightBtn" aria-label="Light mode" class="w-7 h-7 flex items-center justify-center rounded-full bg-surface-container-highest text-on-surface shadow-sm transition-all cursor-pointer" type="button" title="Light Theme">
               <span class="material-symbols-outlined text-[15px] pointer-events-none">light_mode</span>
             </button>
-            <button id="themeDarkBtn" aria-label="Dark mode" class="w-7 h-7 flex items-center justify-center rounded-full bg-surface-container-highest text-on-surface shadow-sm transition-all cursor-pointer" type="button" title="Dark Theme">
+            <button id="themeDarkBtn" aria-label="Dark mode" class="w-7 h-7 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all cursor-pointer" type="button" title="Dark Theme">
               <span class="material-symbols-outlined text-[15px] pointer-events-none">dark_mode</span>
             </button>
           </div>
@@ -986,7 +986,7 @@
           themeDarkBtn?.classList.remove("text-on-surface-variant");
           themeLightBtn?.classList.remove("bg-surface-container-highest", "text-on-surface", "shadow-sm");
           themeLightBtn?.classList.add("text-on-surface-variant");
-          localStorage.setItem("vanshika_theme", "dark");
+          localStorage.setItem("vanshika_portal_theme", "dark");
         } else {
           html.classList.remove("dark");
           html.classList.add("light");
@@ -994,11 +994,12 @@
           themeLightBtn?.classList.remove("text-on-surface-variant");
           themeDarkBtn?.classList.remove("bg-surface-container-highest", "text-on-surface", "shadow-sm");
           themeDarkBtn?.classList.add("text-on-surface-variant");
-          localStorage.setItem("vanshika_theme", "light");
+          localStorage.setItem("vanshika_portal_theme", "light");
         }
       }
 
-      const savedTheme = localStorage.getItem("vanshika_theme") || "dark";
+      // Default to Light theme
+      const savedTheme = localStorage.getItem("vanshika_portal_theme") || "light";
       applyTheme(savedTheme === "dark");
 
       themeLightBtn?.addEventListener("click", (e) => {
