@@ -142,6 +142,23 @@
     .shadow-popover {
       box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.06);
     }
+
+    /* Desktop Instant Hover & Bridge for Profile Popover */
+    #profilePopover::before {
+      content: '';
+      position: absolute;
+      top: -14px;
+      left: 0;
+      right: 0;
+      height: 18px;
+    }
+    @media (hover: hover) and (pointer: fine) {
+      #profileDropdownContainer:hover #profilePopover {
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        transform: translateY(0) !important;
+      }
+    }
 </style><script src="https://cdn.tailwindcss.com"></script>
   <script id="tailwind-config">
     function v(name) {
@@ -284,7 +301,7 @@
 
         <!-- Profile Avatar & Popover Container -->
         <div class="relative" id="profileDropdownContainer">
-          <button id="profileAvatarBtn" class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-primary flex items-center justify-center shrink-0 shadow-sm text-on-primary font-semibold text-[12px] sm:text-[13px] hover:ring-2 hover:ring-primary/40 focus:outline-none transition-all cursor-pointer" type="button" aria-haspopup="true" aria-expanded="false" title="Vanshika Singh • View GitHub Profile">
+          <button id="profileAvatarBtn" class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-primary flex items-center justify-center shrink-0 shadow-sm text-on-primary font-semibold text-[12px] sm:text-[13px] hover:ring-2 hover:ring-primary/40 focus:outline-none transition-all cursor-pointer" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Vanshika Singh • Profile & Settings">
             VS
           </button>
 
@@ -1328,7 +1345,6 @@
       }
 
       // 4. Sneaker Category Switcher (in Card 1 & Hero Frame)
-      const sneakerPills = document.querySelectorAll("button:has(+ button), .font-label-code button");
       // Find category buttons in Card 1
       const card1CatBtns = document.querySelectorAll(".lg\:col-span-7 button");
       card1CatBtns.forEach(btn => {
@@ -1348,7 +1364,7 @@
       });
 
       // 5. Connect 4 Interactive Grid Simulation
-      const resetBtn = document.querySelector("button:has(.material-symbols-outlined:contains('refresh'))");
+      const resetBtn = Array.from(document.querySelectorAll("button")).find(b => b.textContent.includes("refresh"));
       const boardGrid = document.querySelector(".grid-cols-7");
       if (boardGrid) {
         boardGrid.querySelectorAll(".aspect-square").forEach(cell => {
