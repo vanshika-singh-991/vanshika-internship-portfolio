@@ -102,9 +102,8 @@
       --color-on-tertiary-container: 252 250 255;
     }
 
-    @layer base {
+        @layer base {
       html {
-        scroll-behavior: smooth;
         -webkit-text-size-adjust: 100%;
       }
       body {
@@ -115,6 +114,10 @@
       }
       main > :first-child { margin-top: 0 !important; }
       main > :last-child { margin-bottom: 0 !important; }
+    }
+    header {
+      will-change: transform;
+      transform: translateZ(0);
     }
     * {
       -webkit-tap-highlight-color: transparent;
@@ -227,7 +230,7 @@
       }
     };
   </script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased min-h-screen flex flex-col">  <!-- 0. Fixed Navigation Bar -->
-  <header class="fixed top-0 left-0 w-full z-50 bg-surface/85 backdrop-blur-2xl border-b border-outline-variant/30 shadow-[0_1px_12px_rgba(0,0,0,0.06)]">
+  <header class="fixed top-0 left-0 w-full z-50 bg-surface/85 backdrop-blur-md border-b border-outline-variant/30 shadow-[0_1px_12px_rgba(0,0,0,0.06)]">
     <div class="h-14 sm:h-16 max-w-[1200px] mx-auto px-3 sm:px-6 flex items-center justify-between gap-2 sm:gap-4">
       <div class="flex items-center gap-2 min-w-0">
         <a class="text-[17px] sm:text-[19px] text-on-surface font-semibold tracking-tight hover:text-primary transition-colors shrink-0" href="#">
@@ -250,7 +253,7 @@
       <!-- Right Controls: Theme Toggle & VS Profile Avatar with GitHub Popover -->
       <div class="flex items-center gap-2 sm:gap-3 shrink-0">
         <!-- Theme Toggle -->
-        <div class="flex items-center p-0.5 sm:p-1 rounded-full bg-surface-container-lowest border border-outline-variant/40 backdrop-blur-xl cursor-pointer select-none" id="themeToggleGroup" title="Toggle Light / Dark mode">
+        <div class="flex items-center p-0.5 sm:p-1 rounded-full bg-surface-container-lowest border border-outline-variant/40 backdrop-blur-md cursor-pointer select-none" id="themeToggleGroup" title="Toggle Light / Dark mode">
           <button id="themeLightBtn" aria-label="Light mode" class="w-6 h-6 sm:w-7 sm:h-7 flex items-center justify-center rounded-full bg-surface-container-highest text-on-surface shadow-sm transition-all cursor-pointer" type="button" title="Light Theme">
             <span class="material-symbols-outlined text-[14px] sm:text-[15px] pointer-events-none">light_mode</span>
           </button>
@@ -320,12 +323,12 @@
   </header><main class="flex-1 w-full pt-14 sm:pt-16 bg-surface overflow-x-hidden"><div class="flex flex-col w-full">
 <!-- Top Ambient Glow Layer -->
 <div class="relative w-full overflow-hidden">
-<div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[720px] h-[360px] bg-primary-container/20 blur-[140px] pointer-events-none rounded-full"></div>
-<div class="absolute top-48 left-1/4 w-[420px] h-[240px] bg-secondary-container/15 blur-[120px] pointer-events-none rounded-full"></div>
+<div class="pointer-events-none absolute -top-24 left-1/2 -translate-x-1/2 w-[680px] h-[320px] opacity-80" style="background: radial-gradient(ellipse at center, rgba(var(--color-primary-container) / 0.16) 0%, transparent 70%); transform: translateZ(0);"></div>
+<div class="pointer-events-none absolute top-36 left-1/4 w-[420px] h-[220px] opacity-70" style="background: radial-gradient(ellipse at center, rgba(var(--color-secondary-container) / 0.14) 0%, transparent 70%); transform: translateZ(0);"></div>
 <!-- 1. Hero Section -->
 <section class="relative max-w-[1240px] w-full mx-auto px-3 sm:px-6 pt-6 sm:pt-12 md:pt-14 pb-12 sm:pb-16 flex flex-col items-center text-center" id="overview">
 <!-- Eyebrow Pill -->
-<div class="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1 rounded-full bg-surface-container-high/70 backdrop-blur-xl shadow-sm mb-4 sm:mb-6 max-w-[95%]">
+<div class="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1 rounded-full bg-surface-container-high/70 backdrop-blur-md shadow-sm mb-4 sm:mb-6 max-w-[95%]">
 <span class="w-2 h-2 rounded-full bg-primary-container animate-pulse shrink-0"></span>
 <span class="font-label-code text-[11px] sm:text-label-code text-primary uppercase tracking-normal sm:tracking-wider truncate">Web Development Internship • InternPe</span>
 </div>
@@ -356,9 +359,9 @@
 <!-- Device Showcase Mockup Frame -->
 <div class="relative w-full max-w-[1040px] mt-2">
 <!-- Floating Backdrop Illumination -->
-<div class="absolute inset-0 bg-gradient-to-b from-primary/10 via-surface-container-low/5 to-transparent blur-2xl -z-10 rounded-2xl"></div>
+<div class="pointer-events-none absolute inset-0 -z-10 rounded-2xl opacity-75" style="background: radial-gradient(circle at 50% 0%, rgba(var(--color-primary-container) / 0.12) 0%, transparent 75%);"></div>
 <!-- MacBook Pro Style Shell -->
-<div class="relative rounded-2xl bg-surface-container-lowest/90 backdrop-blur-2xl p-3 md:p-5 shadow-2xl shadow-black/80">
+<div class="relative rounded-2xl bg-surface-container-lowest/90 backdrop-blur-md p-3 md:p-5 shadow-xl">
 <!-- Window Controls & Tab Bar -->
 <div class="flex items-center justify-between pb-3.5 px-2 mb-3">
 <div class="flex items-center gap-2">
@@ -1201,25 +1204,44 @@
         });
       }
 
-      // 6. Navigation Active Links on Scroll
+      // 6. Ultra-smooth Asynchronous Active Navigation with IntersectionObserver (Zero Layout Thrashing)
       const navLinks = document.querySelectorAll("header nav a");
-      window.addEventListener("scroll", () => {
-        const sections = ["overview", "projects", "methodology", "tech-stack", "credentials"];
-        let current = "overview";
-        sections.forEach(id => {
-          const el = document.getElementById(id);
-          if (el && window.scrollY >= el.offsetTop - 120) {
-            current = id;
+      const trackedSections = ["overview", "projects", "methodology", "tech-stack", "credentials"]
+        .map(id => document.getElementById(id))
+        .filter(Boolean);
+
+      const navObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+            navLinks.forEach(link => {
+              const href = link.getAttribute("href");
+              if (href === "#" + id) {
+                link.classList.add("text-on-surface", "font-semibold", "border-b", "border-primary", "pb-0.5");
+                link.classList.remove("text-on-surface-variant");
+              } else {
+                link.classList.remove("text-on-surface", "font-semibold", "border-b", "border-primary", "pb-0.5");
+                link.classList.add("text-on-surface-variant");
+              }
+            });
           }
         });
-        navLinks.forEach(link => {
-          const href = link.getAttribute("href");
-          if (href === "#" + current) {
-            link.classList.add("text-on-surface", "font-medium", "border-b", "border-primary", "pb-1");
-            link.classList.remove("text-on-surface-variant");
-          } else {
-            link.classList.remove("text-on-surface", "font-medium", "border-b", "border-primary", "pb-1");
-            link.classList.add("text-on-surface-variant");
+      }, {
+        rootMargin: "-15% 0px -65% 0px",
+        threshold: 0
+      });
+
+      trackedSections.forEach(sec => navObserver.observe(sec));
+
+      // Butter-Smooth Glide on Anchor Click (Allows native instant response on manual trackpad scrolls)
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function(e) {
+          const href = this.getAttribute("href");
+          if (!href || href === "#") return;
+          const target = document.querySelector(href);
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: "smooth" });
           }
         });
       });
@@ -1275,9 +1297,18 @@
         }
       });
 
-      // Close popover immediately when the user scrolls
+      // Close popover smoothly on scroll via requestAnimationFrame
+      let scrollThrottled = false;
       window.addEventListener("scroll", () => {
-        hideProfilePopover();
+        if (!scrollThrottled) {
+          scrollThrottled = true;
+          requestAnimationFrame(() => {
+            if (profilePopover && !profilePopover.classList.contains("opacity-0")) {
+              hideProfilePopover();
+            }
+            scrollThrottled = false;
+          });
+        }
       }, { passive: true });
     });
   </script>
