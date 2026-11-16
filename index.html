@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>Vanshika.dev</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>  <style>
+    :root {
+      --color-primary: 0 113 227;
+      --color-surface-container-high: 229 229 234;
+      --color-surface: 245 245 247;
+      --color-on-secondary-fixed-variant: 0 69 143;
+      --color-on-secondary-fixed: 0 27 63;
+      --color-primary-fixed: 215 226 255;
+      --color-on-tertiary: 29 29 31;
+      --color-surface-container-lowest: 255 255 255;
+      --color-surface-container-highest: 209 209 214;
+      --color-on-tertiary-fixed-variant: 110 110 115;
+      --color-on-surface-variant: 110 110 115;
+      --color-tertiary-container: 142 142 147;
+      --color-on-secondary: 255 255 255;
+      --color-on-error: 255 255 255;
+      --color-secondary-fixed-dim: 199 199 204;
+      --color-on-primary-fixed-variant: 0 69 143;
+      --color-background: 245 245 247;
+      --color-surface-dim: 229 229 234;
+      --color-inverse-surface: 29 29 31;
+      --color-surface-container-low: 255 255 255;
+      --color-surface-variant: 229 229 234;
+      --color-on-secondary-container: 29 29 31;
+      --color-outline: 142 142 147;
+      --color-tertiary-fixed-dim: 199 199 204;
+      --color-on-background: 29 29 31;
+      --color-on-primary: 255 255 255;
+      --color-error: 255 59 48;
+      --color-surface-tint: 0 113 227;
+      --color-outline-variant: 209 209 214;
+      --color-secondary: 142 142 147;
+      --color-error-container: 255 218 218;
+      --color-on-primary-fixed: 0 27 63;
+      --color-primary-fixed-dim: 0 113 227;
+      --color-on-surface: 29 29 31;
+      --color-surface-bright: 255 255 255;
+      --color-on-error-container: 105 0 5;
+      --color-inverse-on-surface: 245 245 247;
+      --color-inverse-primary: 0 113 227;
+      --color-surface-container: 239 239 244;
+      --color-on-primary-container: 255 255 255;
+      --color-primary-container: 0 113 227;
+      --color-secondary-container: 229 229 234;
+      --color-on-tertiary-fixed: 29 29 31;
+      --color-secondary-fixed: 229 229 234;
+      --color-tertiary: 110 110 115;
+      --color-tertiary-fixed: 229 229 234;
+      --color-on-tertiary-container: 29 29 31;
+    }
+
+    html.dark {
+      --color-primary: 171 199 255;
+      --color-surface-container-high: 42 42 44;
+      --color-surface: 19 19 21;
+      --color-on-secondary-fixed-variant: 0 63 164;
+      --color-on-secondary-fixed: 0 24 73;
+      --color-primary-fixed: 215 226 255;
+      --color-on-tertiary: 47 48 52;
+      --color-surface-container-lowest: 14 14 16;
+      --color-surface-container-highest: 53 52 55;
+      --color-on-tertiary-fixed-variant: 70 70 75;
+      --color-on-surface-variant: 193 198 214;
+      --color-tertiary-container: 115 115 120;
+      --color-on-secondary: 0 43 117;
+      --color-on-error: 105 0 5;
+      --color-secondary-fixed-dim: 179 197 255;
+      --color-on-primary-fixed-variant: 0 69 143;
+      --color-background: 19 19 21;
+      --color-surface-dim: 19 19 21;
+      --color-inverse-surface: 228 226 228;
+      --color-surface-container-low: 27 27 29;
+      --color-surface-variant: 53 52 55;
+      --color-on-secondary-container: 199 212 255;
+      --color-outline: 139 145 159;
+      --color-tertiary-fixed-dim: 199 198 203;
+      --color-on-background: 228 226 228;
+      --color-on-primary: 0 47 102;
+      --color-error: 255 180 171;
+      --color-surface-tint: 171 199 255;
+      --color-outline-variant: 65 71 83;
+      --color-secondary: 179 197 255;
+      --color-error-container: 147 0 10;
+      --color-on-primary-fixed: 0 27 63;
+      --color-primary-fixed-dim: 171 199 255;
+      --color-on-surface: 228 226 228;
+      --color-surface-bright: 57 57 59;
+      --color-on-error-container: 255 218 214;
+      --color-inverse-on-surface: 48 48 50;
+      --color-inverse-primary: 0 92 187;
+      --color-surface-container: 31 31 33;
+      --color-on-primary-container: 252 251 255;
+      --color-primary-container: 0 113 227;
+      --color-secondary-container: 3 82 208;
+      --color-on-tertiary-fixed: 26 27 31;
+      --color-secondary-fixed: 218 225 255;
+      --color-tertiary: 199 198 203;
+      --color-tertiary-fixed: 227 226 231;
+      --color-on-tertiary-container: 252 250 255;
+    }
+
+    @layer base {
+      html, body { margin: 0; padding: 0; scroll-behavior: smooth; }
+      body { overscroll-behavior: none; }
+      main > :first-child { margin-top: 0 !important; }
+      main > :last-child { margin-bottom: 0 !important; }
+    }
+    ::-webkit-scrollbar { display: none; }
+  </style><script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    function v(name) {
+      return ({ opacityValue }) => {
+        if (opacityValue !== undefined) {
+          return `rgb(var(${name}) / ${opacityValue})`;
+        }
+        return `rgb(var(${name}))`;
+      };
+    }
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": v("--color-primary"),
+            "surface-container-high": v("--color-surface-container-high"),
+            "surface": v("--color-surface"),
+            "on-secondary-fixed-variant": v("--color-on-secondary-fixed-variant"),
+            "on-secondary-fixed": v("--color-on-secondary-fixed"),
+            "primary-fixed": v("--color-primary-fixed"),
+            "on-tertiary": v("--color-on-tertiary"),
+            "surface-container-lowest": v("--color-surface-container-lowest"),
+            "surface-container-highest": v("--color-surface-container-highest"),
+            "on-tertiary-fixed-variant": v("--color-on-tertiary-fixed-variant"),
+            "on-surface-variant": v("--color-on-surface-variant"),
+            "tertiary-container": v("--color-tertiary-container"),
+            "on-secondary": v("--color-on-secondary"),
+            "on-error": v("--color-on-error"),
+            "secondary-fixed-dim": v("--color-secondary-fixed-dim"),
+            "on-primary-fixed-variant": v("--color-on-primary-fixed-variant"),
+            "background": v("--color-background"),
+            "surface-dim": v("--color-surface-dim"),
+            "inverse-surface": v("--color-inverse-surface"),
+            "surface-container-low": v("--color-surface-container-low"),
+            "surface-variant": v("--color-surface-variant"),
+            "on-secondary-container": v("--color-on-secondary-container"),
+            "outline": v("--color-outline"),
+            "tertiary-fixed-dim": v("--color-tertiary-fixed-dim"),
+            "on-background": v("--color-on-background"),
+            "on-primary": v("--color-on-primary"),
+            "error": v("--color-error"),
+            "surface-tint": v("--color-surface-tint"),
+            "outline-variant": v("--color-outline-variant"),
+            "secondary": v("--color-secondary"),
+            "error-container": v("--color-error-container"),
+            "on-primary-fixed": v("--color-on-primary-fixed"),
+            "primary-fixed-dim": v("--color-primary-fixed-dim"),
+            "on-surface": v("--color-on-surface"),
+            "surface-bright": v("--color-surface-bright"),
+            "on-error-container": v("--color-on-error-container"),
+            "inverse-on-surface": v("--color-inverse-on-surface"),
+            "inverse-primary": v("--color-inverse-primary"),
+            "surface-container": v("--color-surface-container"),
+            "on-primary-container": v("--color-on-primary-container"),
+            "primary-container": v("--color-primary-container"),
+            "secondary-container": v("--color-secondary-container"),
+            "on-tertiary-fixed": v("--color-on-tertiary-fixed"),
+            "secondary-fixed": v("--color-secondary-fixed"),
+            "tertiary": v("--color-tertiary"),
+            "tertiary-fixed": v("--color-tertiary-fixed"),
+            "on-tertiary-container": v("--color-on-tertiary-container")
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          spacing: {
+            "margin": "3rem",
+            "gutter-mobile": "1rem",
+            "space-xl": "2.5rem",
+            "space-md": "1rem",
+            "margin-mobile": "1.25rem",
+            "gutter": "1.5rem",
+            "space-sm": "0.5rem",
+            "space-lg": "1.5rem",
+            "space-xs": "0.25rem"
+          },
+          fontFamily: {
+            "headline-lg-mobile": ["Inter", "sans-serif"],
+            "headline-md": ["Inter", "sans-serif"],
+            "body-lg": ["Inter", "sans-serif"],
+            "body-md": ["Inter", "sans-serif"],
+            "label-code": ["JetBrains Mono", "monospace"],
+            "caption": ["Inter", "sans-serif"],
+            "display-mobile": ["Inter", "sans-serif"],
+            "display": ["Inter", "sans-serif"],
+            "headline-lg": ["Inter", "sans-serif"],
+            "headline-sm": ["Inter", "sans-serif"]
+          },
+          fontSize: {
+            "headline-lg-mobile": ["26px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "headline-md": ["24px", { "lineHeight": "30px", "letterSpacing": "-0.015em", "fontWeight": "500" }],
+            "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "400" }],
+            "label-code": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+            "caption": ["12px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "display-mobile": ["38px", { "lineHeight": "44px", "letterSpacing": "-0.025em", "fontWeight": "600" }],
+            "display": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "600" }],
+            "headline-lg": ["32px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "500" }]
+          }
+        }
+      }
+    };
+  </script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 left-0 w-full z-50 bg-surface/75 backdrop-blur-2xl border-b border-outline-variant/30 shadow-[0_1px_12px_rgba(0,0,0,0.2)]"><div class="h-16 max-w-[1200px] mx-auto px-gutter-mobile md:px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm"><a class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight hover:text-primary transition-colors" href="#">Vanshika<span class="text-primary">.dev</span></a><span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container-high border border-outline-variant/40 font-label-code text-label-code text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>InternPe '26</span></div><nav class="hidden md:flex items-center gap-space-lg" data-active-classes="text-on-surface font-medium border-b border-primary pb-1"><a aria-current="page" class="transition-colors text-on-surface font-medium border-b border-primary pb-1" data-path="overview" href="#overview">Overview</a><a class="text-on-surface-variant hover:text-on-surface font-body-md text-body-md transition-colors" data-path="projects" href="#projects">Projects</a><a class="text-on-surface-variant hover:text-on-surface font-body-md text-body-md transition-colors" data-path="methodology" href="#methodology">Methodology</a><a class="text-on-surface-variant hover:text-on-surface font-body-md text-body-md transition-colors" data-path="tech-stack" href="#tech-stack">Tech Stack</a><a class="text-on-surface-variant hover:text-on-surface font-body-md text-body-md transition-colors" data-path="credentials" href="#credentials">Credentials</a></nav><div class="flex items-center gap-space-sm"><div class="flex items-center p-1 rounded-full bg-surface-container-lowest border border-outline-variant/40 backdrop-blur-xl cursor-pointer select-none" id="themeToggleGroup" title="Toggle Light / Dark mode">
+            <button id="themeLightBtn" aria-label="Light mode" class="w-7 h-7 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all cursor-pointer" type="button" title="Light Theme">
+              <span class="material-symbols-outlined text-[15px] pointer-events-none">light_mode</span>
+            </button>
+            <button id="themeDarkBtn" aria-label="Dark mode" class="w-7 h-7 flex items-center justify-center rounded-full bg-surface-container-highest text-on-surface shadow-sm transition-all cursor-pointer" type="button" title="Dark Theme">
+              <span class="material-symbols-outlined text-[15px] pointer-events-none">dark_mode</span>
+            </button>
+          </div>
+          <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 shadow-sm text-on-primary font-semibold text-[13px]" title="Vanshika Singh">
+            VS
+          </div> flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<!-- Top Ambient Glow Layer -->
+<div class="relative w-full overflow-hidden">
+<div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[720px] h-[360px] bg-primary-container/20 blur-[140px] pointer-events-none rounded-full"></div>
+<div class="absolute top-48 left-1/4 w-[420px] h-[240px] bg-secondary-container/15 blur-[120px] pointer-events-none rounded-full"></div>
+<!-- 1. Hero Section -->
+<section class="relative max-w-[1240px] mx-auto px-gutter-mobile md:px-gutter pt-8 md:pt-14 pb-16 flex flex-col items-center text-center" id="overview">
+<!-- Eyebrow Pill -->
+<div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-surface-container-high/70 backdrop-blur-xl shadow-sm mb-6">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-label-code text-label-code text-primary uppercase tracking-wider">Web Development Internship • InternPe</span>
+</div>
+<!-- Headline -->
+<h1 class="font-display text-display max-w-4xl tracking-tight text-on-surface mb-5 text-balance">
+        Crafting Interactive Web Experiences<span class="text-primary">.</span>
+</h1>
+<!-- Subheadline -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-5 leading-relaxed">
+        A 6-week front-end engineering showcase by Vanshika Singh (BCA, Teerthanker Mahaveer University), building responsive interfaces with HTML, CSS, and JavaScript.
+      </p>
+<!-- Academic Badge -->
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface-variant font-label-code text-label-code mb-8 shadow-inner">
+<span class="material-symbols-outlined text-[15px] text-primary">school</span>
+<span>Teerthanker Mahaveer University · BCA Academic Submission</span>
+</div>
+<!-- Action CTA Buttons -->
+<div class="flex flex-wrap items-center justify-center gap-3.5 mb-14">
+<a class="inline-flex items-center gap-2 px-6 py-2.5 rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-headline-sm hover:opacity-90 active:scale-[0.98] transition-all shadow-md shadow-primary-container/20" href="#projects">
+<span>Explore Projects</span>
+<span class="material-symbols-outlined text-[18px]">arrow_downward</span>
+</a>
+<button class="inline-flex items-center gap-2 px-6 py-2.5 rounded-lg bg-surface-container-high/80 hover:bg-surface-container-highest text-on-surface font-headline-sm text-headline-sm transition-all shadow-sm cursor-pointer" id="openSynopsisBtn" type="button">
+<span class="material-symbols-outlined text-[18px] text-outline">description</span>
+<span>Internship Synopsis</span>
+</button>
+</div>
+<!-- Device Showcase Mockup Frame -->
+<div class="relative w-full max-w-[1040px] mt-2">
+<!-- Floating Backdrop Illumination -->
+<div class="absolute inset-0 bg-gradient-to-b from-primary/10 via-surface-container-low/5 to-transparent blur-2xl -z-10 rounded-2xl"></div>
+<!-- MacBook Pro Style Shell -->
+<div class="relative rounded-2xl bg-surface-container-lowest/90 backdrop-blur-2xl p-3 md:p-5 shadow-2xl shadow-black/80">
+<!-- Window Controls & Tab Bar -->
+<div class="flex items-center justify-between pb-3.5 px-2 mb-3">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-error inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-tertiary-container inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-primary inline-block"></span>
+</div>
+<!-- Omnibar / Address Bar -->
+<div class="flex items-center gap-2 px-4 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-code text-label-code max-w-sm w-full justify-center">
+<span class="material-symbols-outlined text-[14px] text-primary">lock</span>
+<span class="truncate">internpe.vanshika.dev/showcase-2026</span>
+</div>
+<!-- Telemetry Indicator -->
+<div class="hidden sm:flex items-center gap-2 font-label-code text-label-code text-outline">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>4 APPS READY</span>
+</div>
+</div>
+<!-- Screen Canvas: Interactive App Preview Stage -->
+<div class="relative w-full rounded-xl bg-surface-container-low overflow-hidden min-h-[340px] md:min-h-[460px] grid grid-cols-1 md:grid-cols-12 gap-3 p-3 md:p-4">
+<!-- Sneaker Storefront Preview Window (Col 7) -->
+<div class="md:col-span-7 rounded-xl bg-surface-container-lowest p-4 flex flex-col justify-between relative overflow-hidden shadow-lg">
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-2">
+<span class="font-label-code text-label-code text-primary font-semibold">.sneakers</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-code text-[11px]">STOREFRONT</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant text-[13px]">
+<span class="material-symbols-outlined text-[16px]">search</span>
+<span class="material-symbols-outlined text-[16px] text-primary">shopping_bag</span>
+</div>
+</div>
+<!-- Mini Hero Banner -->
+<div class="relative rounded-lg bg-surface-container-high p-4 overflow-hidden mb-3">
+<div class="relative z-10 max-w-[60%]">
+<span class="font-label-code text-label-code text-outline uppercase tracking-wider block mb-1">New Season</span>
+<h4 class="font-headline-sm text-headline-sm font-semibold text-on-surface mb-1">AIR JORDAN 1 LOW</h4>
+<p class="font-body-md text-body-md text-primary font-medium">₹109.00</p>
+</div>
+<!-- Inline Sneaker Outline Art -->
+<div class="absolute -right-4 -bottom-3 opacity-80 pointer-events-none">
+<svg class="text-primary/70" fill="none" height="96" viewbox="0 0 160 80" width="180">
+<path d="M10 55 C 30 55, 45 40, 70 38 C 95 36, 120 48, 140 48 C 150 48, 155 52, 155 60 C 155 66, 148 68, 135 68 L 15 68 C 10 68, 5 62, 10 55 Z" fill="currentColor" fill-opacity="0.2"></path>
+<path d="M40 38 L 75 18 C 90 10, 115 15, 128 32 L 140 48" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M15 68 H 155" stroke="currentColor" stroke-linecap="round" stroke-width="3"></path>
+</svg>
+</div>
+</div>
+<!-- Categories Pill Strip -->
+<div class="flex items-center gap-1.5 overflow-x-auto pb-1 mb-2 font-label-code text-[11px] text-on-surface-variant">
+<span class="px-2.5 py-1 rounded-full bg-primary-container text-on-primary-container font-medium">All</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant">Jordan</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant">Blazer</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant">Crater</span>
+</div>
+<div class="flex items-center justify-between pt-2">
+<span class="font-label-code text-label-code text-outline">HTML5 • CSS Grid • Vanilla JS</span>
+<a href="task2-ecommerce/index.html" class="text-primary font-label-code text-label-code font-medium hover:underline flex items-center gap-1">Live Preview ↗</a>
+</div>
+</div>
+<!-- Side Split: Calculator & Connect4 Stack (Col 5) -->
+<div class="md:col-span-5 flex flex-col gap-3">
+<!-- Calculator Mini Component -->
+<div class="rounded-xl bg-surface-container-lowest p-3.5 flex flex-col justify-between flex-1 shadow-md">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-code text-[11px] text-on-surface-variant">IOS CALCULATOR</span>
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+</div>
+<!-- Mini Display -->
+<div class="bg-surface-container px-3 py-1.5 rounded-lg text-right font-label-code text-headline-sm font-semibold text-on-surface mb-2 tracking-tight">
+                  1,024.50
+                </div>
+<!-- Mini Keypad 4x2 representation -->
+<div class="grid grid-cols-4 gap-1.5 font-label-code text-[11px] text-center">
+<span class="p-1 rounded bg-surface-container-high text-outline">C</span>
+<span class="p-1 rounded bg-surface-container-high text-outline">±</span>
+<span class="p-1 rounded bg-surface-container-high text-outline">%</span>
+<span class="p-1 rounded bg-secondary-container text-on-secondary-container font-semibold">÷</span>
+<span class="p-1 rounded bg-surface-container text-on-surface">7</span>
+<span class="p-1 rounded bg-surface-container text-on-surface">8</span>
+<span class="p-1 rounded bg-surface-container text-on-surface">9</span>
+<span class="p-1 rounded bg-secondary-container text-on-secondary-container font-semibold">×</span>
+</div>
+</div>
+<!-- Connect 4 Mini Component -->
+<div class="rounded-xl bg-surface-container-lowest p-3.5 flex flex-col justify-between flex-1 shadow-md">
+<div class="flex items-center justify-between mb-1.5">
+<span class="font-label-code text-[11px] text-on-surface-variant">CONNECT 4 ENGINE</span>
+<span class="px-1.5 py-0.5 rounded bg-primary-container/20 text-primary font-label-code text-[10px]">P1 TURN</span>
+</div>
+<!-- Grid preview -->
+<div class="bg-secondary-container/30 p-2 rounded-lg grid grid-cols-7 gap-1 place-items-center">
+<span class="w-3.5 h-3.5 rounded-full bg-surface-container-high inline-block"></span>
+<span class="w-3.5 h-3.5 rounded-full bg-error inline-block"></span>
+<span class="w-3.5 h-3.5 rounded-full bg-primary inline-block"></span>
+<span class="w-3.5 h-3.5 rounded-full bg-surface-container-high inline-block"></span>
+<span class="w-3.5 h-3.5 rounded-full bg-surface-container-high inline-block"></span>
+<span class="w-3.5 h-3.5 rounded-full bg-primary inline-block"></span>
+<span class="w-3.5 h-3.5 rounded-full bg-error inline-block"></span>
+</div>
+<div class="flex items-center justify-between font-label-code text-[10px] text-outline mt-1.5">
+<span>State: Active Matrix</span>
+<span class="text-primary font-medium">Win Detection Active</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- 2. Stat Tiles Strip (4 Compact Glass Bento Cards) -->
+<section class="max-w-[1240px] w-full mx-auto px-gutter-mobile md:px-gutter py-8">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Stat 1: Duration Weeks -->
+<div class="rounded-2xl bg-surface-container-low p-6 flex flex-col justify-between transition-all duration-300 hover:bg-surface-container shadow-sm group">
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-code text-label-code text-outline uppercase tracking-wider">Duration</span>
+<div class="w-9 h-9 rounded-xl bg-surface-container-high flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[20px]">calendar_today</span>
+</div>
+</div>
+<div>
+<div class="font-display-mobile text-display-mobile text-on-surface font-semibold tracking-tight mb-1">6 Weeks</div>
+<div class="font-body-md text-body-md text-on-surface font-medium mb-1">06 July – 19 August 2026</div>
+<div class="font-caption text-caption text-primary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+<span>+100% completion rate of 6 weeks</span>
+</div>
+</div>
+</div>
+<!-- Stat 2: Core Projects -->
+<div class="rounded-2xl bg-surface-container-low p-6 flex flex-col justify-between transition-all duration-300 hover:bg-surface-container shadow-sm group">
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-code text-label-code text-outline uppercase tracking-wider">Deliverables</span>
+<div class="w-9 h-9 rounded-xl bg-surface-container-high flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[20px]">terminal</span>
+</div>
+</div>
+<div>
+<div class="font-display-mobile text-display-mobile text-on-surface font-semibold tracking-tight mb-1">4 Projects</div>
+<div class="font-body-md text-body-md text-on-surface font-medium mb-1">HTML, CSS &amp; JavaScript</div>
+<div class="font-caption text-caption text-primary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>100% fully delivered of 4 projects</span>
+</div>
+</div>
+</div>
+<!-- Stat 3: Domain Focus -->
+<div class="rounded-2xl bg-surface-container-low p-6 flex flex-col justify-between transition-all duration-300 hover:bg-surface-container shadow-sm group">
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-code text-label-code text-outline uppercase tracking-wider">Organization</span>
+<div class="w-9 h-9 rounded-xl bg-surface-container-high flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+</div>
+</div>
+<div>
+<div class="font-display-mobile text-display-mobile text-on-surface font-semibold tracking-tight mb-1">InternPe</div>
+<div class="font-body-md text-body-md text-on-surface font-medium mb-1">Offline Web Dev Domain</div>
+<div class="font-caption text-caption text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-primary">code</span>
+<span>Internship track · Front-End</span>
+</div>
+</div>
+</div>
+<!-- Stat 4: University ID -->
+<div class="rounded-2xl bg-surface-container-low p-6 flex flex-col justify-between transition-all duration-300 hover:bg-surface-container shadow-sm group">
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-code text-label-code text-outline uppercase tracking-wider">Candidate Credential</span>
+<div class="w-9 h-9 rounded-xl bg-surface-container-high flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[20px]">school</span>
+</div>
+</div>
+<div>
+<div class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight mb-1">TCA2468642</div>
+<div class="font-body-md text-body-md text-on-surface font-medium mb-1">TMU-CCSIT Department</div>
+<div class="font-caption text-caption text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-primary">location_on</span>
+<span>BCA Academic · Moradabad</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Engineering Methodology & Stack -->
+<section class="max-w-[1240px] w-full mx-auto px-gutter-mobile md:px-gutter py-16" id="methodology">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+<div>
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container text-primary font-label-code text-label-code mb-3">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>SYSTEMATIC PIPELINE</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">
+          Engineering Methodology &amp; Stack
+        </h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+        A structured 6-step front-end workflow powered by modern web standards, guaranteeing maintainability and sub-millisecond execution.
+      </p>
+</div>
+<!-- 6-Step Stepper Bar -->
+<div class="rounded-2xl bg-surface-container-low p-4 mb-10 overflow-x-auto shadow-sm">
+<div class="flex items-center min-w-[760px] justify-between gap-2">
+<div class="flex items-center gap-2 px-3 py-2 rounded-xl bg-surface-container-high text-on-surface font-label-code text-label-code">
+<span class="w-5 h-5 rounded-full bg-primary text-on-primary flex items-center justify-center font-semibold text-[11px]">1</span>
+<span>Requirement Understanding</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]">arrow_forward</span>
+<div class="flex items-center gap-2 px-3 py-2 rounded-xl bg-surface-container-high text-on-surface font-label-code text-label-code">
+<span class="w-5 h-5 rounded-full bg-primary text-on-primary flex items-center justify-center font-semibold text-[11px]">2</span>
+<span>Structure Design</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]">arrow_forward</span>
+<div class="flex items-center gap-2 px-3 py-2 rounded-xl bg-surface-container-high text-on-surface font-label-code text-label-code">
+<span class="w-5 h-5 rounded-full bg-primary text-on-primary flex items-center justify-center font-semibold text-[11px]">3</span>
+<span>Responsive Styling</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]">arrow_forward</span>
+<div class="flex items-center gap-2 px-3 py-2 rounded-xl bg-surface-container-high text-on-surface font-label-code text-label-code">
+<span class="w-5 h-5 rounded-full bg-primary text-on-primary flex items-center justify-center font-semibold text-[11px]">4</span>
+<span>Dynamic Logic</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]">arrow_forward</span>
+<div class="flex items-center gap-2 px-3 py-2 rounded-xl bg-surface-container-high text-on-surface font-label-code text-label-code">
+<span class="w-5 h-5 rounded-full bg-primary text-on-primary flex items-center justify-center font-semibold text-[11px]">5</span>
+<span>Unit Testing</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]">arrow_forward</span>
+<div class="flex items-center gap-2 px-3 py-2 rounded-xl bg-primary-container text-on-primary-container font-label-code text-label-code font-medium">
+<span class="w-5 h-5 rounded-full bg-on-primary-container text-primary-container flex items-center justify-center font-semibold text-[11px]">6</span>
+<span>Refinement</span>
+</div>
+</div>
+</div>
+<!-- 4 Feature Cards (Workflow Deep Dives) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
+<!-- Card 1 -->
+<div class="rounded-2xl bg-surface-container-low p-6 flex flex-col justify-between shadow-sm hover:bg-surface-container transition-colors">
+<div>
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined text-[22px]">assignment</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-2">Requirement Analysis</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Analyzed core user stories and interface specifications for each assigned web application prior to code authoring.
+          </p>
+</div>
+<div class="mt-6 pt-4 bg-surface-container-lowest/60 rounded-xl p-3 font-label-code text-[11px] text-outline flex items-center justify-between">
+<span>SPEC SPECIFICATION</span>
+<span class="text-primary font-medium">100% COVERAGE</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="rounded-2xl bg-surface-container-low p-6 flex flex-col justify-between shadow-sm hover:bg-surface-container transition-colors">
+<div>
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined text-[22px]">html</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-2">Structure Design</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Authored clean semantic HTML5 markup to establish robust document hierarchies and accessible ARIA attributes.
+          </p>
+</div>
+<div class="mt-6 pt-4 bg-surface-container-lowest/60 rounded-xl p-3 font-label-code text-[11px] text-outline flex items-center justify-between">
+<span>SEMANTIC NODES</span>
+<span class="text-primary font-medium">W3C VALID</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="rounded-2xl bg-surface-container-low p-6 flex flex-col justify-between shadow-sm hover:bg-surface-container transition-colors">
+<div>
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined text-[22px]">css</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-2">Responsive Styling</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Applied CSS3 media queries and flexible grid layouts for flawless presentation across mobile, tablet, and retina displays.
+          </p>
+</div>
+<div class="mt-6 pt-4 bg-surface-container-lowest/60 rounded-xl p-3 font-label-code text-[11px] text-outline flex items-center justify-between">
+<span>LAYOUT ENGINE</span>
+<span class="text-primary font-medium">FLEX &amp; CSS GRID</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="rounded-2xl bg-surface-container-low p-6 flex flex-col justify-between shadow-sm hover:bg-surface-container transition-colors">
+<div>
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined text-[22px]">javascript</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-2">Dynamic Logic</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Implemented robust JavaScript event handling, state management, and DOM manipulation without heavy external libraries.
+          </p>
+</div>
+<div class="mt-6 pt-4 bg-surface-container-lowest/60 rounded-xl p-3 font-label-code text-[11px] text-outline flex items-center justify-between">
+<span>RUNTIME ENGINE</span>
+<span class="text-primary font-medium">ZERO DEPENDENCIES</span>
+</div>
+</div>
+</div>
+<!-- Tech Stack Pill Group -->
+<div class="rounded-2xl bg-surface-container-low p-5 flex flex-wrap items-center justify-between gap-4" id="tech-stack">
+<div class="flex items-center gap-3">
+<span class="font-label-code text-label-code uppercase tracking-wider text-outline">Production Stack:</span>
+</div>
+<div class="flex flex-wrap items-center gap-2.5">
+<div class="px-3.5 py-1.5 rounded-full bg-surface-container-high text-on-surface font-label-code text-label-code flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>HTML5 (Semantic Hierarchy)</span>
+</div>
+<div class="px-3.5 py-1.5 rounded-full bg-surface-container-high text-on-surface font-label-code text-label-code flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span>CSS3 (Media Queries &amp; Grid)</span>
+</div>
+<div class="px-3.5 py-1.5 rounded-full bg-surface-container-high text-on-surface font-label-code text-label-code flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>JavaScript ES6+ (DOM &amp; State)</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Featured Internship Projects (4-Card Bento Grid) -->
+<section class="max-w-[1240px] w-full mx-auto px-gutter-mobile md:px-gutter py-12 mb-16" id="projects">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+<div>
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container text-primary font-label-code text-label-code mb-3">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>PORTFOLIO SHOWCASE</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">
+          Featured Internship Projects
+        </h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm">
+        Four interactive web applications built from scratch, demonstrating DOM manipulation, responsive styling, and algorithmic game logic.
+      </p>
+</div>
+<!-- Bento Grid Container -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- ========================================== -->
+<!-- CARD 1: eCommerce Storefront (.sneakers)   -->
+<!-- Bento Span: 7 Columns                      -->
+<!-- ========================================== -->
+<div class="lg:col-span-7 rounded-2xl bg-surface-container-low p-6 md:p-8 flex flex-col justify-between shadow-xl transition-all duration-300 hover:shadow-2xl hover:bg-surface-container group">
+<div>
+<!-- Card Header & Metadata Chips -->
+<div class="flex flex-wrap items-center justify-between gap-3 mb-5">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2.5 py-1 rounded-full bg-primary-container/20 text-primary font-label-code text-[11px] font-medium">Storefront UI</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-code text-[11px]">Featured</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-label-code text-[11px] font-semibold">₹109</span>
+</div>
+<div class="flex items-center gap-1 font-label-code text-[12px] text-on-surface">
+<span class="material-symbols-outlined text-primary text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.9</span>
+</div>
+</div>
+<!-- Title & Description -->
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight mb-2">
+            eCommerce Storefront (.sneakers)
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
+            Dark minimalist sneaker storefront featuring category filters, dynamic shopping cart state management, and an interactive product slider.
+          </p>
+<!-- Rich UI Mockup: Sneaker Storefront Experience -->
+<div class="rounded-xl bg-surface-container-lowest p-4 md:p-5 shadow-inner mb-6">
+<!-- Store Nav Bar -->
+<div class="flex items-center justify-between pb-3 mb-4 border-b border-surface-container-high">
+<div class="flex items-center gap-2">
+<span class="font-label-code text-on-surface font-semibold text-[14px]">.sneakers</span>
+<span class="text-outline font-label-code text-[11px]">/ catalog</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="hidden sm:flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-code text-[11px]">
+<span class="material-symbols-outlined text-[13px]">search</span>
+<span>Search shoes...</span>
+</div>
+<div class="relative cursor-pointer">
+<span class="material-symbols-outlined text-on-surface text-[20px]">shopping_bag</span>
+<span class="absolute -top-1.5 -right-2 w-4 h-4 rounded-full bg-primary-container text-on-primary-container font-label-code text-[10px] flex items-center justify-center font-bold">2</span>
+</div>
+</div>
+</div>
+<!-- Category Selector Pills -->
+<div class="flex items-center gap-2 overflow-x-auto pb-2 mb-4 font-label-code text-[11px]">
+<button class="px-3 py-1 rounded-full bg-primary-container text-on-primary-container font-medium shrink-0" type="button">Air Force</button>
+<button class="px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface shrink-0" type="button">Jordan</button>
+<button class="px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface shrink-0" type="button">Blazer</button>
+<button class="px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface shrink-0" type="button">Crater</button>
+<button class="px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface shrink-0" type="button">Hippie</button>
+</div>
+<!-- Hero Banner Box inside Card -->
+<div class="relative rounded-xl bg-surface-container p-4 md:p-6 overflow-hidden flex flex-col md:flex-row items-center justify-between gap-4">
+<div class="z-10 max-w-xs">
+<div class="inline-block px-2 py-0.5 rounded bg-primary-container/20 text-primary font-label-code text-[10px] uppercase tracking-wider mb-2">BLAZER NEW SEASON</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-1">Nike Blazer Mid '77</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Vintage court styling redesigned for daily streetwear comfort.</p>
+<div class="flex items-center gap-3">
+<span class="font-headline-sm text-headline-sm text-primary font-semibold">₹109.00</span>
+<button class="px-3.5 py-1.5 rounded-lg bg-primary-container hover:bg-secondary-container text-on-primary-container font-label-code text-label-code font-medium transition-colors" type="button">
+                    Add to Cart
+                  </button>
+</div>
+</div>
+<!-- Product Graphic Art -->
+<div class="w-48 h-32 flex items-center justify-center relative">
+<svg class="w-full h-full text-primary drop-shadow-[0_8px_16px_rgba(0,113,227,0.3)]" fill="none" viewbox="0 0 200 120">
+<path d="M20 85 C 40 85, 60 70, 90 68 C 120 65, 150 78, 175 78 C 185 78, 192 82, 190 92 C 188 100, 180 102, 160 102 L 25 102 C 18 102, 12 95, 20 85 Z" fill="currentColor" fill-opacity="0.3"></path>
+<path d="M50 68 L 95 35 C 115 20, 148 28, 162 50 L 175 78" stroke="currentColor" stroke-linejoin="round" stroke-width="3"></path>
+<path d="M120 45 C 100 50, 75 75, 45 80" stroke="currentColor" stroke-dasharray="3 3" stroke-linecap="round" stroke-width="2"></path>
+<line stroke="currentColor" stroke-linecap="round" stroke-width="4" x1="25" x2="190" y1="102" y2="102"></line>
+</svg>
+</div>
+</div>
+</div>
+</div>
+<!-- Full-Width Card Action -->
+<a href="task2-ecommerce/index.html" class="w-full py-3 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-headline-sm text-headline-sm font-medium flex items-center justify-center gap-2 transition-all group-hover:bg-primary-container group-hover:text-on-primary-container">
+<span>Launch Storefront (.sneakers)</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+<!-- ========================================== -->
+<!-- CARD 2: Basic Calculator                   -->
+<!-- Bento Span: 5 Columns                      -->
+<!-- ========================================== -->
+<div class="lg:col-span-5 rounded-2xl bg-surface-container-low p-6 md:p-8 flex flex-col justify-between shadow-xl transition-all duration-300 hover:shadow-2xl hover:bg-surface-container group">
+<div>
+<!-- Header Chips -->
+<div class="flex flex-wrap items-center justify-between gap-3 mb-5">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2.5 py-1 rounded-full bg-primary-container/20 text-primary font-label-code text-[11px] font-medium">Utility Tool</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-code text-[11px]">Interactive</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-outline font-label-code text-[11px]">Free</span>
+</div>
+<div class="flex items-center gap-1 font-label-code text-[12px] text-on-surface">
+<span class="material-symbols-outlined text-primary text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.8</span>
+</div>
+</div>
+<!-- Title & Description -->
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight mb-2">
+            Basic Calculator
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
+            Sleek Apple-style calculator widget with real-time numeric display, floating-point math, keyboard event listening, and error handling.
+          </p>
+<!-- Rich UI Mockup: iOS-style Calculator Device -->
+<div class="rounded-xl bg-surface-container-lowest p-4 shadow-inner mb-6 max-w-sm mx-auto w-full">
+<div class="flex items-center justify-between mb-3 px-1">
+<span class="font-label-code text-[11px] text-outline">CALCULATOR ENGINE</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-code text-[10px]">KEYBOARD READY</span>
+</div>
+<!-- Live Numeric Display -->
+<div class="bg-surface-container-high rounded-xl p-3.5 mb-3 text-right">
+<div class="font-label-code text-[11px] text-outline mb-0.5">2,048 ÷ 2</div>
+<div class="font-label-code text-[26px] font-semibold text-on-surface tracking-tight" id="calc-display">1,024.50</div>
+</div>
+<!-- Keypad Matrix (iOS styled) -->
+<div class="grid grid-cols-4 gap-2 font-label-code text-[13px] font-medium text-center">
+<!-- Row 1 -->
+<button class="py-2.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" type="button">AC</button>
+<button class="py-2.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" type="button">±</button>
+<button class="py-2.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" type="button">%</button>
+<button class="py-2.5 rounded-lg bg-secondary-container text-on-secondary-container hover:opacity-90 font-semibold transition-opacity" type="button">÷</button>
+<!-- Row 2 -->
+<button class="py-2.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" type="button">7</button>
+<button class="py-2.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" type="button">8</button>
+<button class="py-2.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" type="button">9</button>
+<button class="py-2.5 rounded-lg bg-secondary-container text-on-secondary-container hover:opacity-90 font-semibold transition-opacity" type="button">×</button>
+<!-- Row 3 -->
+<button class="py-2.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" type="button">4</button>
+<button class="py-2.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" type="button">5</button>
+<button class="py-2.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" type="button">6</button>
+<button class="py-2.5 rounded-lg bg-secondary-container text-on-secondary-container hover:opacity-90 font-semibold transition-opacity" type="button">−</button>
+<!-- Row 4 -->
+<button class="py-2.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" type="button">1</button>
+<button class="py-2.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" type="button">2</button>
+<button class="py-2.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" type="button">3</button>
+<button class="py-2.5 rounded-lg bg-secondary-container text-on-secondary-container hover:opacity-90 font-semibold transition-opacity" type="button">+</button>
+<!-- Row 5 -->
+<button class="col-span-2 py-2.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors text-left px-4" type="button">0</button>
+<button class="py-2.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" type="button">.</button>
+<button class="py-2.5 rounded-lg bg-primary-container text-on-primary-container hover:opacity-90 font-bold transition-opacity" type="button">=</button>
+</div>
+</div>
+</div>
+<!-- Full-Width Card Action -->
+<a href="task1-calculator/index.html" class="w-full py-3 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-headline-sm text-headline-sm font-medium flex items-center justify-center gap-2 transition-all group-hover:bg-primary-container group-hover:text-on-primary-container">
+<span>Launch Basic Calculator</span>
+<span class="material-symbols-outlined text-[18px]">calculate</span>
+</a>
+</div>
+<!-- ========================================== -->
+<!-- CARD 3: To-Do List Manager                 -->
+<!-- Bento Span: 5 Columns                      -->
+<!-- ========================================== -->
+<div class="lg:col-span-5 rounded-2xl bg-surface-container-low p-6 md:p-8 flex flex-col justify-between shadow-xl transition-all duration-300 hover:shadow-2xl hover:bg-surface-container group">
+<div>
+<!-- Header Chips -->
+<div class="flex flex-wrap items-center justify-between gap-3 mb-5">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2.5 py-1 rounded-full bg-primary-container/20 text-primary font-label-code text-[11px] font-medium">Productivity</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-code text-[11px]">Persistent</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-outline font-label-code text-[11px]">Free</span>
+</div>
+<div class="flex items-center gap-1 font-label-code text-[12px] text-on-surface">
+<span class="material-symbols-outlined text-primary text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.9</span>
+</div>
+</div>
+<!-- Title & Description -->
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight mb-2">
+            To-Do List Manager
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
+            Task organizer UI with interactive checkmarks, filter tabs (All, Active, Completed), and Local Storage synchronization for zero-loss workflow.
+          </p>
+<!-- Rich UI Mockup: Task Manager -->
+<div class="rounded-xl bg-surface-container-lowest p-4 shadow-inner mb-6">
+<!-- Input Add Row -->
+<div class="flex items-center gap-2 mb-3.5">
+<div class="flex-1 flex items-center gap-2 px-3 py-2 rounded-lg bg-surface-container-high text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-[16px] text-outline">add_task</span>
+<span class="truncate">Add new task...</span>
+</div>
+<button class="px-3.5 py-2 rounded-lg bg-primary-container hover:bg-secondary-container text-on-primary-container font-label-code text-label-code font-medium transition-colors" type="button">
+                Add
+              </button>
+</div>
+<!-- Task List Items -->
+<div class="space-y-2 mb-3">
+<!-- Item 1 (Completed) -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container/60 hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="w-4 h-4 rounded-full bg-primary flex items-center justify-center text-on-primary text-[10px]">✓</span>
+<span class="font-body-md text-body-md line-through text-outline truncate">Review internpe deliverables</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[16px] cursor-pointer hover:text-error transition-colors">delete</span>
+</div>
+<!-- Item 2 (Active) -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="w-4 h-4 rounded-full bg-surface-container-high border-2 border-primary inline-block"></span>
+<span class="font-body-md text-body-md text-on-surface truncate">Implement DOM localstorage cache</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[16px] cursor-pointer hover:text-error transition-colors">delete</span>
+</div>
+<!-- Item 3 (Active) -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="w-4 h-4 rounded-full bg-surface-container-high border-2 border-primary inline-block"></span>
+<span class="font-body-md text-body-md text-on-surface truncate">Refactor CSS flexbox grid</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[16px] cursor-pointer hover:text-error transition-colors">delete</span>
+</div>
+</div>
+<!-- Footer Meta -->
+<div class="flex items-center justify-between pt-2 border-t border-surface-container-high font-label-code text-[11px] text-outline">
+<span>2 tasks pending</span>
+<span class="text-primary font-medium">LocalStorage Synchronized</span>
+</div>
+</div>
+</div>
+<!-- Full-Width Card Action -->
+<a href="task3-todolist/index.html" class="w-full py-3 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-headline-sm text-headline-sm font-medium flex items-center justify-center gap-2 transition-all group-hover:bg-primary-container group-hover:text-on-primary-container">
+<span>Launch Task Manager</span>
+<span class="material-symbols-outlined text-[18px]">checklist</span>
+</a>
+</div>
+<!-- ========================================== -->
+<!-- CARD 4: Connect 4 Multiplayer Game         -->
+<!-- Bento Span: 7 Columns                      -->
+<!-- ========================================== -->
+<div class="lg:col-span-7 rounded-2xl bg-surface-container-low p-6 md:p-8 flex flex-col justify-between shadow-xl transition-all duration-300 hover:shadow-2xl hover:bg-surface-container group">
+<div>
+<!-- Header Chips -->
+<div class="flex flex-wrap items-center justify-between gap-3 mb-5">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2.5 py-1 rounded-full bg-primary-container/20 text-primary font-label-code text-[11px] font-medium">Game App</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-code text-[11px]">Multiplayer</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-outline font-label-code text-[11px]">Free</span>
+</div>
+<div class="flex items-center gap-1 font-label-code text-[12px] text-on-surface">
+<span class="material-symbols-outlined text-primary text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>5.0</span>
+</div>
+</div>
+<!-- Title & Description -->
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight mb-2">
+            Connect 4 Multiplayer Game
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
+            Interactive 7x6 game board engine with gravity drop simulations, 4-in-a-row diagonal/horizontal win detection algorithms, and one-tap instant reset.
+          </p>
+<!-- Rich UI Mockup: Connect 4 Interactive Board Canvas -->
+<div class="rounded-xl bg-surface-container-lowest p-4 md:p-5 shadow-inner mb-6">
+<!-- Game Status Bar -->
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-error animate-pulse"></span>
+<span class="font-label-code text-label-code text-on-surface font-medium">Player 2's turn (Red)</span>
+</div>
+<div class="flex items-center gap-2 font-label-code text-[11px]">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-medium">Win Detection: 4-in-a-row</span>
+<button class="px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-high text-outline hover:text-on-surface transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[13px]">refresh</span>
+<span>Reset Match</span>
+</button>
+</div>
+</div>
+<!-- 7x6 Grid Board Representation -->
+<div class="rounded-xl bg-secondary-container/40 p-3 md:p-4 max-w-md mx-auto">
+<div class="grid grid-cols-7 gap-1.5 md:gap-2">
+<!-- Row 1 -->
+<div class="aspect-square rounded-full bg-surface-container-lowest flex items-center justify-center"></div>
+<div class="aspect-square rounded-full bg-surface-container-lowest flex items-center justify-center"></div>
+<div class="aspect-square rounded-full bg-surface-container-lowest flex items-center justify-center"></div>
+<div class="aspect-square rounded-full bg-surface-container-lowest flex items-center justify-center"></div>
+<div class="aspect-square rounded-full bg-surface-container-lowest flex items-center justify-center"></div>
+<div class="aspect-square rounded-full bg-surface-container-lowest flex items-center justify-center"></div>
+<div class="aspect-square rounded-full bg-surface-container-lowest flex items-center justify-center"></div>
+<!-- Row 2 -->
+<div class="aspect-square rounded-full bg-surface-container-lowest flex items-center justify-center"></div>
+<div class="aspect-square rounded-full bg-surface-container-lowest flex items-center justify-center"></div>
+<div class="aspect-square rounded-full bg-primary flex items-center justify-center shadow-sm"></div>
+<div class="aspect-square rounded-full bg-surface-container-lowest flex items-center justify-center"></div>
+<div class="aspect-square rounded-full bg-surface-container-lowest flex items-center justify-center"></div>
+<div class="aspect-square rounded-full bg-surface-container-lowest flex items-center justify-center"></div>
+<div class="aspect-square rounded-full bg-surface-container-lowest flex items-center justify-center"></div>
+<!-- Row 3 -->
+<div class="aspect-square rounded-full bg-surface-container-lowest flex items-center justify-center"></div>
+<div class="aspect-square rounded-full bg-error flex items-center justify-center shadow-sm"></div>
+<div class="aspect-square rounded-full bg-primary flex items-center justify-center shadow-sm"></div>
+<div class="aspect-square rounded-full bg-surface-container-lowest flex items-center justify-center"></div>
+<div class="aspect-square rounded-full bg-surface-container-lowest flex items-center justify-center"></div>
+<div class="aspect-square rounded-full bg-surface-container-lowest flex items-center justify-center"></div>
+<div class="aspect-square rounded-full bg-surface-container-lowest flex items-center justify-center"></div>
+<!-- Row 4 -->
+<div class="aspect-square rounded-full bg-primary flex items-center justify-center shadow-sm"></div>
+<div class="aspect-square rounded-full bg-error flex items-center justify-center shadow-sm"></div>
+<div class="aspect-square rounded-full bg-primary flex items-center justify-center shadow-sm"></div>
+<div class="aspect-square rounded-full bg-error flex items-center justify-center shadow-sm"></div>
+<div class="aspect-square rounded-full bg-surface-container-lowest flex items-center justify-center"></div>
+<div class="aspect-square rounded-full bg-surface-container-lowest flex items-center justify-center"></div>
+<div class="aspect-square rounded-full bg-surface-container-lowest flex items-center justify-center"></div>
+<!-- Row 5 -->
+<div class="aspect-square rounded-full bg-error flex items-center justify-center shadow-sm"></div>
+<div class="aspect-square rounded-full bg-primary flex items-center justify-center shadow-sm"></div>
+<div class="aspect-square rounded-full bg-error flex items-center justify-center shadow-sm"></div>
+<div class="aspect-square rounded-full bg-primary flex items-center justify-center shadow-sm"></div>
+<div class="aspect-square rounded-full bg-error flex items-center justify-center shadow-sm"></div>
+<div class="aspect-square rounded-full bg-surface-container-lowest flex items-center justify-center"></div>
+<div class="aspect-square rounded-full bg-surface-container-lowest flex items-center justify-center"></div>
+<!-- Row 6 (Bottom) -->
+<div class="aspect-square rounded-full bg-primary flex items-center justify-center shadow-sm"></div>
+<div class="aspect-square rounded-full bg-error flex items-center justify-center shadow-sm"></div>
+<div class="aspect-square rounded-full bg-primary flex items-center justify-center shadow-sm"></div>
+<div class="aspect-square rounded-full bg-error flex items-center justify-center shadow-sm"></div>
+<div class="aspect-square rounded-full bg-primary flex items-center justify-center shadow-sm"></div>
+<div class="aspect-square rounded-full bg-error flex items-center justify-center shadow-sm"></div>
+<div class="aspect-square rounded-full bg-surface-container-lowest flex items-center justify-center"></div>
+</div>
+</div>
+<div class="flex items-center justify-between font-label-code text-[11px] text-outline mt-3">
+<span>Yellow: P1 • Red: P2</span>
+<span class="text-primary font-medium">Diagonal Scan Algorithm Ready</span>
+</div>
+</div>
+</div>
+<!-- Full-Width Card Action -->
+<a href="task4-connect4/index.html" class="w-full py-3 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-headline-sm text-headline-sm font-medium flex items-center justify-center gap-2 transition-all group-hover:bg-primary-container group-hover:text-on-primary-container">
+<span>Launch Connect 4 Game</span>
+<span class="material-symbols-outlined text-[18px]">sports_esports</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Final Engineering Credentials Banner -->
+<section class="max-w-[1240px] w-full mx-auto px-gutter-mobile md:px-gutter pb-16" id="credentials">
+<div class="rounded-2xl bg-surface-container-low p-6 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-md">
+<div class="space-y-2 text-center md:text-left">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container text-primary font-label-code text-label-code">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>OFFLINE INTERNSHIP CERTIFICATION</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">
+          Evaluated &amp; Validated by InternPe Technical Guild
+        </h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+          Completed within the standard 6-week curriculum with verified git commits, responsive cross-browser audits, and clean vanilla architecture.
+        </p>
+</div>
+<div class="flex items-center gap-3 shrink-0">
+<a class="px-6 py-2.5 rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-headline-sm hover:opacity-90 active:scale-[0.98] transition-all shadow-md" href="#projects">
+          Explore Codebase
+        </a>
+</div>
+</div>
+</section>
+<!-- Micro-interaction Script for Calculator & Tab Highlights -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // 1. Theme Management (defaults to dark mode, persists to localStorage)
+      const html = document.documentElement;
+      const themeToggleGroup = document.getElementById("themeToggleGroup");
+      const themeLightBtn = document.getElementById("themeLightBtn");
+      const themeDarkBtn = document.getElementById("themeDarkBtn");
+
+      function applyTheme(isDark) {
+        if (isDark) {
+          html.classList.remove("light");
+          html.classList.add("dark");
+          themeDarkBtn?.classList.add("bg-surface-container-highest", "text-on-surface", "shadow-sm");
+          themeDarkBtn?.classList.remove("text-on-surface-variant");
+          themeLightBtn?.classList.remove("bg-surface-container-highest", "text-on-surface", "shadow-sm");
+          themeLightBtn?.classList.add("text-on-surface-variant");
+          localStorage.setItem("vanshika_theme", "dark");
+        } else {
+          html.classList.remove("dark");
+          html.classList.add("light");
+          themeLightBtn?.classList.add("bg-surface-container-highest", "text-on-surface", "shadow-sm");
+          themeLightBtn?.classList.remove("text-on-surface-variant");
+          themeDarkBtn?.classList.remove("bg-surface-container-highest", "text-on-surface", "shadow-sm");
+          themeDarkBtn?.classList.add("text-on-surface-variant");
+          localStorage.setItem("vanshika_theme", "light");
+        }
+      }
+
+      const savedTheme = localStorage.getItem("vanshika_theme") || "dark";
+      applyTheme(savedTheme === "dark");
+
+      themeLightBtn?.addEventListener("click", (e) => {
+        e.stopPropagation();
+        applyTheme(false);
+      });
+      themeDarkBtn?.addEventListener("click", (e) => {
+        e.stopPropagation();
+        applyTheme(true);
+      });
+      themeToggleGroup?.addEventListener("click", () => {
+        const isDark = html.classList.contains("dark");
+        applyTheme(!isDark);
+      });
+
+      // 2. Synopsis Modal Handler
+      const synopsisModal = document.getElementById("synopsisModal");
+      const openSynopsisBtn = document.getElementById("openSynopsisBtn");
+      const closeSynopsisBtn = document.getElementById("closeSynopsisBtn");
+      const closeSynopsisBtn2 = document.getElementById("closeSynopsisBtn2");
+
+      openSynopsisBtn?.addEventListener("click", () => {
+        synopsisModal?.classList.remove("opacity-0", "pointer-events-none");
+      });
+      closeSynopsisBtn?.addEventListener("click", () => {
+        synopsisModal?.classList.add("opacity-0", "pointer-events-none");
+      });
+      closeSynopsisBtn2?.addEventListener("click", () => {
+        synopsisModal?.classList.add("opacity-0", "pointer-events-none");
+      });
+      synopsisModal?.addEventListener("click", (e) => {
+        if (e.target === synopsisModal) {
+          synopsisModal.classList.add("opacity-0", "pointer-events-none");
+        }
+      });
+
+      // 3. Calculator Interactive Widget
+      const calcDisplay = document.getElementById("calc-display");
+      if (calcDisplay) {
+        const keypad = calcDisplay.closest(".rounded-xl")?.querySelectorAll("button");
+        let calcExpr = "";
+        keypad?.forEach(btn => {
+          btn.addEventListener("click", () => {
+            const txt = btn.textContent.trim();
+            if (txt === "AC" || txt === "C") {
+              calcExpr = "";
+              calcDisplay.textContent = "0";
+            } else if (txt === "=") {
+              if (!calcExpr) return;
+              try {
+                const evalExpr = calcExpr.replace(/×/g, "*").replace(/÷/g, "/").replace(/−/g, "-");
+                const res = Function('"use strict"; return (' + evalExpr + ')')();
+                calcDisplay.textContent = String(Math.round(res * 1e6) / 1e6);
+                calcExpr = String(calcDisplay.textContent);
+              } catch {
+                calcDisplay.textContent = "Error";
+                calcExpr = "";
+              }
+            } else {
+              if (calcDisplay.textContent === "0" || calcDisplay.textContent === "1,024.50" || calcDisplay.textContent === "Error") {
+                calcExpr = "";
+              }
+              calcExpr += txt;
+              calcDisplay.textContent = calcExpr;
+            }
+          });
+        });
+      }
+
+      // 4. Sneaker Category Switcher (in Card 1 & Hero Frame)
+      const sneakerPills = document.querySelectorAll("button:has(+ button), .font-label-code button");
+      // Find category buttons in Card 1
+      const card1CatBtns = document.querySelectorAll(".lg\:col-span-7 button");
+      card1CatBtns.forEach(btn => {
+        const text = btn.textContent.trim();
+        if (["Air Force", "Jordan", "Blazer", "Crater", "Hippie"].includes(text)) {
+          btn.addEventListener("click", () => {
+            card1CatBtns.forEach(b => {
+              if (["Air Force", "Jordan", "Blazer", "Crater", "Hippie"].includes(b.textContent.trim())) {
+                b.classList.remove("bg-primary-container", "text-on-primary-container");
+                b.classList.add("bg-surface-container-high", "text-on-surface-variant");
+              }
+            });
+            btn.classList.remove("bg-surface-container-high", "text-on-surface-variant");
+            btn.classList.add("bg-primary-container", "text-on-primary-container");
+          });
+        }
+      });
+
+      // 5. Connect 4 Interactive Grid Simulation
+      const resetBtn = document.querySelector("button:has(.material-symbols-outlined:contains('refresh'))");
+      const boardGrid = document.querySelector(".grid-cols-7");
+      if (boardGrid) {
+        boardGrid.querySelectorAll(".aspect-square").forEach(cell => {
+          cell.addEventListener("click", () => {
+            if (cell.classList.contains("bg-surface-container-lowest")) {
+              cell.classList.remove("bg-surface-container-lowest");
+              cell.classList.add("bg-primary", "shadow-sm");
+            } else if (cell.classList.contains("bg-primary")) {
+              cell.classList.remove("bg-primary");
+              cell.classList.add("bg-error");
+            } else {
+              cell.classList.remove("bg-error");
+              cell.classList.add("bg-surface-container-lowest");
+            }
+          });
+        });
+      }
+
+      // 6. Navigation Active Links on Scroll
+      const navLinks = document.querySelectorAll("header nav a");
+      window.addEventListener("scroll", () => {
+        const sections = ["overview", "projects", "methodology", "tech-stack", "credentials"];
+        let current = "overview";
+        sections.forEach(id => {
+          const el = document.getElementById(id);
+          if (el && window.scrollY >= el.offsetTop - 120) {
+            current = id;
+          }
+        });
+        navLinks.forEach(link => {
+          const href = link.getAttribute("href");
+          if (href === "#" + current) {
+            link.classList.add("text-on-surface", "font-medium", "border-b", "border-primary", "pb-1");
+            link.classList.remove("text-on-surface-variant");
+          } else {
+            link.classList.remove("text-on-surface", "font-medium", "border-b", "border-primary", "pb-1");
+            link.classList.add("text-on-surface-variant");
+          }
+        });
+      });
+    });
+  </script>
+
+
+  <!-- Synopsis Modal Dialog -->
+  <div id="synopsisModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300 px-4">
+    <div class="relative w-full max-w-2xl rounded-2xl bg-surface-container border border-outline-variant/40 shadow-2xl p-6 md:p-8 max-h-[90vh] overflow-y-auto">
+      <div class="flex items-center justify-between pb-4 border-b border-outline-variant/30 mb-5">
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-primary text-[24px]">school</span>
+          <h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Internship Synopsis Overview</h3>
+        </div>
+        <button id="closeSynopsisBtn" class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors cursor-pointer" type="button">&times;</button>
+      </div>
+      
+      <div class="space-y-4 font-body-md text-body-md text-on-surface-variant">
+        <div class="p-4 rounded-xl bg-surface-container-lowest/70 border border-outline-variant/20">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 font-label-code text-[12px]">
+            <div><span class="text-outline">Student:</span> <strong class="text-on-surface">Vanshika Singh</strong></div>
+            <div><span class="text-outline">Enrollment / ID:</span> <strong class="text-on-surface">TCA2468642</strong></div>
+            <div><span class="text-outline">Degree / Univ:</span> <strong class="text-on-surface">BCA, Teerthanker Mahaveer University</strong></div>
+            <div><span class="text-outline">Host Org:</span> <strong class="text-on-surface">InternPe (Offline Web Dev)</strong></div>
+            <div><span class="text-outline">Timeline:</span> <strong class="text-on-surface">6 Weeks (06 July – 19 August 2026)</strong></div>
+            <div><span class="text-outline">Department:</span> <strong class="text-on-surface">CCSIT, TMU Moradabad</strong></div>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-2">Project Synopsis Objectives</h4>
+          <p class="leading-relaxed">
+            The internship encompasses 4 distinct web development deliverables built with pure front-end web standards (semantic HTML5, modern CSS3 layout techniques, and modular JavaScript without external frameworks):
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div class="p-3.5 rounded-xl bg-surface-container-high">
+            <span class="font-label-code text-[11px] text-primary font-semibold block mb-1">TASK 1 • CALC</span>
+            <div class="font-headline-sm text-[15px] text-on-surface font-medium">Basic Calculator</div>
+            <p class="font-caption text-caption text-on-surface-variant mt-1">Arithmetic evaluation, keyboard event capture, and division by zero guarding.</p>
+          </div>
+          <div class="p-3.5 rounded-xl bg-surface-container-high">
+            <span class="font-label-code text-[11px] text-primary font-semibold block mb-1">TASK 2 • E-COMMERCE</span>
+            <div class="font-headline-sm text-[15px] text-on-surface font-medium">Sneaker Storefront</div>
+            <p class="font-caption text-caption text-on-surface-variant mt-1">Interactive catalog, bento showcases, live cart drawer, and currency in ₹.</p>
+          </div>
+          <div class="p-3.5 rounded-xl bg-surface-container-high">
+            <span class="font-label-code text-[11px] text-primary font-semibold block mb-1">TASK 3 • PRODUCTIVITY</span>
+            <div class="font-headline-sm text-[15px] text-on-surface font-medium">To-Do List Manager</div>
+            <p class="font-caption text-caption text-on-surface-variant mt-1">Task creation, completion toggles, status filters, and localStorage persistence.</p>
+          </div>
+          <div class="p-3.5 rounded-xl bg-surface-container-high">
+            <span class="font-label-code text-[11px] text-primary font-semibold block mb-1">TASK 4 • GAMING</span>
+            <div class="font-headline-sm text-[15px] text-on-surface font-medium">Connect 4 Multiplayer</div>
+            <p class="font-caption text-caption text-on-surface-variant mt-1">7x6 matrix simulation, gravity mechanics, and 4-in-a-row algorithmic referee.</p>
+          </div>
+        </div>
+
+        <div class="pt-2 flex justify-end gap-3">
+          <button id="closeSynopsisBtn2" class="px-5 py-2 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-headline-sm text-[14px] transition-colors cursor-pointer" type="button">Close</button>
+          <a href="#projects" onclick="document.getElementById('synopsisModal').classList.add('opacity-0', 'pointer-events-none')" class="px-5 py-2 rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-[14px] transition-opacity hover:opacity-90">Explore Projects</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant/30 mt-auto"><div class="max-w-[1200px] mx-auto px-gutter-mobile md:px-gutter py-space-xl"><div class="grid grid-cols-2 md:grid-cols-4 gap-space-lg mb-space-xl"><div><h4 class="font-label-code text-label-code uppercase tracking-wider text-outline mb-space-sm">Internship</h4><ul class="space-y-space-xs font-body-md text-body-md text-on-surface-variant"><li><span class="text-on-surface">InternPe</span> · SWE Intern</li><li>Full Stack Architecture</li><li>Platform Telemetry</li></ul></div><div><h4 class="font-label-code text-label-code uppercase tracking-wider text-outline mb-space-sm">Academics</h4><ul class="space-y-space-xs font-body-md text-body-md text-on-surface-variant"><li>B.Tech Computer Science</li><li>Graduation Class of 2026</li><li>Systems &amp; Algorithms</li></ul></div><div><h4 class="font-label-code text-label-code uppercase tracking-wider text-outline mb-space-sm">Leadership</h4><ul class="space-y-space-xs font-body-md text-body-md text-on-surface-variant"><li>Technical Guild Lead</li><li>Open-Source Contributor</li><li>Hackathon Finalist</li></ul></div><div><h4 class="font-label-code text-label-code uppercase tracking-wider text-outline mb-space-sm">Tech Stack</h4><ul class="space-y-space-xs font-body-md text-body-md text-on-surface-variant"><li>TypeScript · React · Next.js</li><li>Go · Node.js · PostgreSQL</li><li>Distributed Systems · Docker</li></ul></div></div><div class="pt-space-md border-t border-outline-variant/20 flex flex-col sm:flex-row items-center justify-between gap-space-sm font-caption text-caption text-outline"><div>© 2026 Vanshika Singh. Precision Crafted Engineering.</div><div class="flex items-center gap-space-md font-label-code text-label-code text-on-surface-variant"><span>LATENCY: 14ms</span><span>STATUS: DEPLOYED</span></div></div></div></footer></body></html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>.sneakers — Pristine Light Storefront</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Top Navigation -->
+  <header class="store-nav">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <span class="brand-text">.sneakers</span>
+        <span class="brand-pill">Storefront</span>
+      </div>
+
+      <div class="search-wrap">
+        <span class="material-symbols-outlined search-icon">search</span>
+        <input type="text" id="searchInput" placeholder="Search shoes..." aria-label="Search shoes">
+      </div>
+
+      <div class="nav-actions">
+        <button id="cartBtn" class="cart-pill-btn" aria-label="View Shopping Bag">
+          <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+          <span>Bag (<span id="cartCount">0</span>)</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Category Filter Bar -->
+    <div class="category-strip">
+      <div class="category-pills">
+        <button class="cat-pill active" data-product="0">Air Force</button>
+        <button class="cat-pill" data-product="1">Jordan</button>
+        <button class="cat-pill" data-product="2">Blazer</button>
+        <button class="cat-pill" data-product="3">Crater</button>
+        <button class="cat-pill" data-product="4">Hippie</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Feature Showcase -->
+  <section class="hero-showcase" id="heroSection">
+    <div class="hero-left">
+      <span class="hero-tag" id="heroEyebrow">Featured Specimen</span>
+      <h1 class="hero-title" id="heroTitle">BLAZER<br><span>NEW SEASON</span></h1>
+      <p class="hero-price" id="heroPrice">₹109.00</p>
+      <div class="hero-btn-row">
+        <button class="btn-primary" id="heroBuyBtn">Add to Bag</button>
+        <a href="#productsCatalog" class="btn-ghost">View All Models &darr;</a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="ambient-glow" id="heroCircle"></div>
+      <svg id="heroShoeSvg" viewBox="0 0 500 300" class="hero-shoe-svg" xmlns="http://www.w3.org/2000/svg">
+        <g id="shoeArtwork">
+          <path d="M70,210 Q90,210 150,210 L390,210 Q430,210 440,195 Q450,175 420,150 L370,110 Q340,70 300,75 L230,120 L160,140 Q110,145 90,165 Q70,185 70,210 Z" fill="#ffffff" stroke="#1d1d1f" stroke-width="3"/>
+          <path d="M60,210 L450,210 Q455,225 440,230 L70,230 Q55,225 60,210 Z" fill="#efeff4" stroke="#1d1d1f" stroke-width="2.5"/>
+          <path d="M140,140 C220,180 320,120 410,165 C330,205 210,170 140,140 Z" fill="#0071e3"/>
+          <path d="M240,115 L260,140 M265,110 L285,135 M290,105 L310,130" stroke="#6e6e73" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="105" cy="180" r="4" fill="#d1d1d6"/>
+          <circle cx="120" cy="180" r="4" fill="#d1d1d6"/>
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Features Strip -->
+  <section class="features-bar">
+    <div class="feature-card">
+      <span class="material-symbols-outlined feature-icon">local_shipping</span>
+      <h4>Free Worldwide Delivery</h4>
+      <p>Express courier dispatch with live tracking.</p>
+    </div>
+    <div class="feature-card">
+      <span class="material-symbols-outlined feature-icon">published_with_changes</span>
+      <h4>14-Day Free Returns</h4>
+      <p>Effortless digital return authorization.</p>
+    </div>
+    <div class="feature-card">
+      <span class="material-symbols-outlined feature-icon">eco</span>
+      <h4>Sustainable Materials</h4>
+      <p>Manufactured using reclaimed Space Waste foam.</p>
+    </div>
+    <div class="feature-card">
+      <span class="material-symbols-outlined feature-icon">support_agent</span>
+      <h4>Specialist Support</h4>
+      <p>24/7 technical customer assistance.</p>
+    </div>
+  </section>
+
+  <!-- Product Grid -->
+  <main class="catalog-section" id="productsCatalog">
+    <div class="catalog-title-area">
+      <span class="section-eyebrow">The Collection</span>
+      <h2 class="section-title">All Series Models</h2>
+    </div>
+    <div class="product-cards-grid" id="productGrid">
+      <!-- Generated via JS -->
+    </div>
+  </main>
+
+  <!-- Slide-over Cart Drawer -->
+  <div class="drawer-backdrop" id="cartModal">
+    <div class="drawer-overlay" id="cartOverlay"></div>
+    <div class="drawer-content">
+      <div class="drawer-header">
+        <h3>Shopping Bag</h3>
+        <button class="drawer-close" id="closeCart">&times;</button>
+      </div>
+      <div class="drawer-items" id="cartItemsList">
+        <p class="empty-msg">Your shopping bag is empty.</p>
+      </div>
+      <div class="drawer-footer">
+        <div class="subtotal-box">
+          <span>Subtotal</span>
+          <span id="cartTotalVal">₹0.00</span>
+        </div>
+        <button class="btn-primary full-width" id="checkoutBtn">Proceed to Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Checkout Modal -->
+  <div class="modal-backdrop" id="checkoutModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>Delivery Details</h3>
+        <button class="drawer-close" id="closeCheckout">&times;</button>
+      </div>
+      <form id="checkoutForm" onsubmit="event.preventDefault(); handleCheckoutSubmit();">
+        <div class="form-row">
+          <label for="custName">Full Name</label>
+          <input type="text" id="custName" required placeholder="Vanshika Singh">
+        </div>
+        <div class="form-row">
+          <label for="custEmail">Email Address</label>
+          <input type="email" id="custEmail" required placeholder="vanshika@tmu.ac.in">
+        </div>
+        <div class="form-row">
+          <label for="custAddress">Shipping Address</label>
+          <input type="text" id="custAddress" required placeholder="CCSIT, TMU Campus, Moradabad">
+        </div>
+        <div class="form-row">
+          <label for="custPayment">Payment Option</label>
+          <select id="custPayment">
+            <option>Apple Pay / UPI Direct</option>
+            <option>Debit / Credit Card</option>
+            <option>Cash on Delivery</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-primary full-width mt-16">Confirm &amp; Place Order</button>
+      </form>
+      <div id="orderConfirmation" class="confirmation-box" style="display:none;">
+        <span class="material-symbols-outlined text-[28px] text-success">check_circle</span>
+        <h4>Order Placed Successfully!</h4>
+        <p>A confirmation email has been dispatched to your inbox.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="store-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <strong>.sneakers &bull; Web Development Internship</strong>
+        <p>Created by Vanshika Singh (TCA2468642), CCSIT TMU Moradabad for InternPe.</p>
+      </div>
+      <div class="footer-links">
+        <a href="../index.html">&larr; Return to Portfolio Suite</a>
+        <a href="../task1-calculator/index.html">Calculator</a>
+        <a href="../task3-todolist/index.html">To-Do List</a>
+        <a href="../task4-connect4/index.html">Connect 4</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

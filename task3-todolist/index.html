@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List — Pristine Light Edition</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="todo-window">
+    <!-- Window Bar -->
+    <div class="window-bar">
+      <div class="traffic-dots">
+        <span class="dot close"></span>
+        <span class="dot min"></span>
+        <span class="dot zoom"></span>
+      </div>
+      <div class="window-title">To-Do List &bull; Task 3</div>
+      <div class="spacer"></div>
+    </div>
+
+    <div class="todo-inner">
+      <div class="todo-header">
+        <div class="header-icon">
+          <span class="material-symbols-outlined text-[20px]">checklist</span>
+        </div>
+        <div>
+          <h1 class="header-title">Tasks &amp; Objectives</h1>
+          <p class="header-meta" id="taskCounter">0 tasks</p>
+        </div>
+      </div>
+
+      <!-- Input Form -->
+      <form class="task-input-bar" id="todoForm" onsubmit="event.preventDefault(); addTask();">
+        <span class="material-symbols-outlined input-icon">add_circle</span>
+        <input 
+          type="text" 
+          id="taskInput" 
+          placeholder="Add a new task..." 
+          autocomplete="off" 
+          aria-label="New task input"
+        >
+        <button type="submit" id="addBtn" class="btn-add">Add</button>
+      </form>
+
+      <!-- Task Items List -->
+      <ul class="task-items-list" id="taskList" role="list">
+        <!-- Injected via script.js -->
+      </ul>
+
+      <!-- Footer Actions -->
+      <div class="todo-actions-bar">
+        <button type="button" class="btn-clear" id="clearCompletedBtn">Clear Completed</button>
+        <a href="../index.html" class="back-link">&larr; Return to Suite</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

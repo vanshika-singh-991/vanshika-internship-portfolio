@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator — Pristine Light Edition</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="calc-window">
+    <!-- Window Bar -->
+    <div class="window-topbar">
+      <div class="window-dots">
+        <span class="dot close"></span>
+        <span class="dot min"></span>
+        <span class="dot zoom"></span>
+      </div>
+      <div class="window-title">Calculator &bull; Task 1</div>
+      <div class="spacer"></div>
+    </div>
+
+    <!-- Screen Display -->
+    <div class="display-box">
+      <div class="display-label">EXPRESSION REGISTER</div>
+      <input type="text" id="display" readonly placeholder="0" aria-label="Calculator display">
+    </div>
+
+    <!-- Keypad Grid -->
+    <div class="keypad">
+      <button type="button" class="btn btn-action text-error" data-action="clear">AC</button>
+      <button type="button" class="btn btn-action" data-action="delete">DE</button>
+      <button type="button" class="btn btn-action" data-val=".">.</button>
+      <button type="button" class="btn btn-op" data-val="/">÷</button>
+
+      <button type="button" class="btn btn-num" data-val="1">1</button>
+      <button type="button" class="btn btn-num" data-val="2">2</button>
+      <button type="button" class="btn btn-num" data-val="3">3</button>
+      <button type="button" class="btn btn-op" data-val="*">×</button>
+
+      <button type="button" class="btn btn-num" data-val="4">4</button>
+      <button type="button" class="btn btn-num" data-val="5">5</button>
+      <button type="button" class="btn btn-num" data-val="6">6</button>
+      <button type="button" class="btn btn-op" data-val="-">−</button>
+
+      <button type="button" class="btn btn-num" data-val="7">7</button>
+      <button type="button" class="btn btn-num" data-val="8">8</button>
+      <button type="button" class="btn btn-num" data-val="9">9</button>
+      <button type="button" class="btn btn-op" data-val="+">+</button>
+
+      <button type="button" class="btn btn-num" data-val="00">00</button>
+      <button type="button" class="btn btn-num" data-val="0">0</button>
+      <button type="button" class="btn btn-equal" data-action="calculate">=</button>
+    </div>
+
+    <div class="window-footer">
+      <a href="../index.html" class="nav-back">&larr; Return to Portfolio Showcase</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
